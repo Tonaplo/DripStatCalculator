@@ -9,7 +9,7 @@ namespace DripStatCalculator
     public static class Function
     {
         //Multiplier
-        public static double Multiplier = 1.1d;
+        public static decimal Multiplier = 1.1m;
 
         //Starting Prices in bytes
         public static int StartingPriceCursor = 20;
@@ -34,5 +34,66 @@ namespace DripStatCalculator
         public static int StartingBPSCPU = 0;
         public static int StartingBPSGPU = 0;
         public static int StartingBPSCluster = 0;
+
+        public static string Beautify(decimal number)
+        {
+            if (number / 1000000000000 > 1)
+                return decimal.Round(number / 1000000000000, 2).ToString();
+            else if (number / 1000000000 > 1)
+                return decimal.Round(number / 1000000000, 2).ToString();
+            else if (number / 1000000 > 1)
+                return decimal.Round(number / 1000000, 2).ToString();
+            else if(number / 1000 > 1)
+                return decimal.Round(number / 1000, 2).ToString();
+
+            return decimal.Round(number, 2).ToString();
+        }
+
+        public static decimal BeautifyButKeepLength(decimal number)
+        {
+            if (number / 1000000000000 > 1)
+            {
+                number = decimal.Floor(number / 10000000000);
+                number = decimal.Round(number / 100,2);
+                return number * 1000000000000;
+            }
+            else if (number / 1000000000 > 1)
+            {
+                number = decimal.Floor(number / 10000000);
+                number = decimal.Round(number / 100, 2);
+                return number * 1000000000;
+            }
+            else if (number / 1000000 > 1)
+            {
+                number = decimal.Floor(number / 10000);
+                number = decimal.Round(number / 100, 2);
+                return number * 1000000;
+            }
+            else if (number / 1000 > 1)
+            {
+                number = decimal.Floor(number / 10);
+                number = decimal.Round(number / 100, 2);
+                return number * 1000;
+            }
+
+            return decimal.Ceiling(number);
+        }
+
+        public static string AppendCorrectAbbreviation(decimal number)
+        {
+            if (number / 1000000000000 > 1)
+                return " Tb";
+
+            else if (number / 1000000000 > 1)
+                return " Gb";
+
+            else if (number / 1000000 > 1)
+                return " Mb";
+
+            else if (number / 1000 > 1)
+                return " kb";
+
+            return " bytes";
+        }
     }
 }
