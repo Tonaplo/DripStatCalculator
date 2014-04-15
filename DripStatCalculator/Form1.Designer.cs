@@ -991,6 +991,7 @@
             this.buttonCursorBuyPowerUp.TabIndex = 77;
             this.buttonCursorBuyPowerUp.Text = "+";
             this.buttonCursorBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonCursorBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonBrogrammerBuyPowerUp
             // 
@@ -1000,6 +1001,7 @@
             this.buttonBrogrammerBuyPowerUp.TabIndex = 78;
             this.buttonBrogrammerBuyPowerUp.Text = "+";
             this.buttonBrogrammerBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonBrogrammerBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonGCFailureBuyPowerUp
             // 
@@ -1009,6 +1011,7 @@
             this.buttonGCFailureBuyPowerUp.TabIndex = 79;
             this.buttonGCFailureBuyPowerUp.Text = "+";
             this.buttonGCFailureBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonGCFailureBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonMemoryLeakBuyPowerUp
             // 
@@ -1018,6 +1021,7 @@
             this.buttonMemoryLeakBuyPowerUp.TabIndex = 80;
             this.buttonMemoryLeakBuyPowerUp.Text = "+";
             this.buttonMemoryLeakBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonMemoryLeakBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonMessageQueueBuyPowerUp
             // 
@@ -1027,6 +1031,7 @@
             this.buttonMessageQueueBuyPowerUp.TabIndex = 81;
             this.buttonMessageQueueBuyPowerUp.Text = "+";
             this.buttonMessageQueueBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonMessageQueueBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonDatabaseBuyPowerUp
             // 
@@ -1036,6 +1041,7 @@
             this.buttonDatabaseBuyPowerUp.TabIndex = 82;
             this.buttonDatabaseBuyPowerUp.Text = "+";
             this.buttonDatabaseBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonDatabaseBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonCacheBuyPowerUp
             // 
@@ -1045,6 +1051,7 @@
             this.buttonCacheBuyPowerUp.TabIndex = 83;
             this.buttonCacheBuyPowerUp.Text = "+";
             this.buttonCacheBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonCacheBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonCPUBuyPowerUp
             // 
@@ -1054,6 +1061,7 @@
             this.buttonCPUBuyPowerUp.TabIndex = 84;
             this.buttonCPUBuyPowerUp.Text = "+";
             this.buttonCPUBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonCPUBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonGPUBuyPowerUp
             // 
@@ -1063,6 +1071,7 @@
             this.buttonGPUBuyPowerUp.TabIndex = 85;
             this.buttonGPUBuyPowerUp.Text = "+";
             this.buttonGPUBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonGPUBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonClusterBuyPowerUp
             // 
@@ -1072,6 +1081,7 @@
             this.buttonClusterBuyPowerUp.TabIndex = 86;
             this.buttonClusterBuyPowerUp.Text = "+";
             this.buttonClusterBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonClusterBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
             // 
             // buttonCursorBuyUnit
             // 

@@ -18,7 +18,7 @@ namespace DripStatCalculator
 
         #endregion
 
-        #region Internal Functions
+        #region GUI Functions
 
         public void UpdateUnitCount()
         {
@@ -32,6 +32,20 @@ namespace DripStatCalculator
             labelCPUCount.Text = cpuUnitCount.ToString();
             labelGPUCount.Text = gpuUnitCount.ToString();
             labelClusterCount.Text = clusterUnitCount.ToString();
+        }
+
+        public void UpdatePowerUpCount()
+        {
+            labelCursorPowerUp.Text = cursorPowerUpCount.ToString();
+            labelBrogrammerPowerUp.Text = brogrammerPowerUpCount.ToString();
+            labelGCFailurePowerUp.Text = gcfailurePowerUpCount.ToString();
+            labelMemoryLeakPowerUp.Text = memoryleakPowerUpCount.ToString();
+            labelMessageQueuePowerUp.Text = messagequeuePowerUpCount.ToString();
+            labelDatabasePowerUp.Text = databasePowerUpCount.ToString();
+            labelCachePowerUp.Text = cachePowerUpCount.ToString();
+            labelCPUPowerUp.Text = cpuPowerUpCount.ToString();
+            labelGPUPowerUp.Text = gpuPowerUpCount.ToString();
+            labelClusterPowerUp.Text = clusterPowerUpCount.ToString();
         }
         #endregion
 
@@ -72,6 +86,32 @@ namespace DripStatCalculator
                 clusterUnitCount++;
 
             UpdateUnitCount();
+        }
+
+        private void buttonBuyPowerUp_Click(object sender, EventArgs e)
+        {
+            if (sender.Equals(buttonCursorBuyPowerUp))
+                cursorPowerUpCount++;
+            else if (sender.Equals(buttonBrogrammerBuyPowerUp))
+                brogrammerPowerUpCount++;
+            else if (sender.Equals(buttonGCFailureBuyPowerUp))
+                gcfailurePowerUpCount++;
+            else if (sender.Equals(buttonMemoryLeakBuyPowerUp))
+                memoryleakPowerUpCount++;
+            else if (sender.Equals(buttonMessageQueueBuyPowerUp))
+                messagequeuePowerUpCount++;
+            else if (sender.Equals(buttonDatabaseBuyPowerUp))
+                databasePowerUpCount++;
+            else if (sender.Equals(buttonCacheBuyPowerUp))
+                cachePowerUpCount++;
+            else if (sender.Equals(buttonCPUBuyPowerUp))
+                cpuPowerUpCount++;
+            else if (sender.Equals(buttonGPUBuyPowerUp))
+                gpuPowerUpCount++;
+            else if (sender.Equals(buttonClusterBuyPowerUp))
+                clusterPowerUpCount++;
+
+            UpdatePowerUpCount();
         }
         #endregion
 
