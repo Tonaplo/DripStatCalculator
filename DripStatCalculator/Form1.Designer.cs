@@ -1349,7 +1349,7 @@
             this.labelBPSFromClicks.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 336);
             this.labelBPSFromClicks.Name = "labelBPSFromClicks";
-            this.labelBPSFromClicks.Size = new System.Drawing.Size(93, 23);
+            this.labelBPSFromClicks.Size = new System.Drawing.Size(118, 23);
             this.labelBPSFromClicks.TabIndex = 111;
             this.labelBPSFromClicks.Text = "0";
             this.labelBPSFromClicks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1371,7 +1371,7 @@
             this.labelTotalBPS.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalBPS.Location = new System.Drawing.Point(184, 359);
             this.labelTotalBPS.Name = "labelTotalBPS";
-            this.labelTotalBPS.Size = new System.Drawing.Size(93, 23);
+            this.labelTotalBPS.Size = new System.Drawing.Size(118, 23);
             this.labelTotalBPS.TabIndex = 113;
             this.labelTotalBPS.Text = "0";
             this.labelTotalBPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1382,7 +1382,7 @@
             this.labelRecommendation.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecommendation.Location = new System.Drawing.Point(308, 313);
             this.labelRecommendation.Name = "labelRecommendation";
-            this.labelRecommendation.Size = new System.Drawing.Size(745, 67);
+            this.labelRecommendation.Size = new System.Drawing.Size(745, 69);
             this.labelRecommendation.TabIndex = 114;
             this.labelRecommendation.Text = "You should now buy a X for optimal BPS increase.";
             this.labelRecommendation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1392,7 +1392,7 @@
             this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 313);
             this.textBoxClicksPerSecond.MaxLength = 5;
             this.textBoxClicksPerSecond.Name = "textBoxClicksPerSecond";
-            this.textBoxClicksPerSecond.Size = new System.Drawing.Size(93, 20);
+            this.textBoxClicksPerSecond.Size = new System.Drawing.Size(118, 20);
             this.textBoxClicksPerSecond.TabIndex = 115;
             this.textBoxClicksPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxClicksPerSecond.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -1401,7 +1401,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 415);
+            this.ClientSize = new System.Drawing.Size(1058, 389);
             this.Controls.Add(this.textBoxClicksPerSecond);
             this.Controls.Add(this.labelRecommendation);
             this.Controls.Add(this.labelTotalBPS);
@@ -1517,6 +1517,7 @@
             this.Controls.Add(this.labelGCFailure);
             this.Controls.Add(this.labelBrogrammer);
             this.Controls.Add(this.labelCursor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DripStatCalculator";
             this.Text = "DripStatCalculator";
             this.Load += new System.EventHandler(this.DripStatCalculator_Load);

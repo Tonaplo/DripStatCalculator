@@ -194,9 +194,9 @@ namespace DripStatCalculator
             totalPower += (gpuOutputPerUnit * gpuUnitCount);
             totalPower += (clusterOutputPerUnit * clusterUnitCount);
 
-            labelBPSFromClicks.Text = Function.BeautifyBPS(0.15m * totalPower * ((decimal)Math.Pow(1.1, (double)cursorPowerUpCount))) + Function.AppendCorrectAbbreviationBPS(0.15m * totalPower * ((decimal)Math.Pow(1.1, (double)cursorPowerUpCount)));
+            labelBPSFromClicks.Text = Function.BeautifyBPS(totalPower * (0.1m * cursorPowerUpCount)) + Function.AppendCorrectAbbreviationBPS(totalPower * (0.1m * cursorPowerUpCount));
 
-            totalPower += (0.15m * totalPower * ((decimal)Math.Pow(1.1, (double)cursorPowerUpCount))) * noClicksPerSecond;
+            totalPower += (totalPower * (0.1m * cursorPowerUpCount)) * noClicksPerSecond;
 
             labelTotalBPS.Text = Function.BeautifyBPS(totalPower) + Function.AppendCorrectAbbreviationBPS(totalPower);
         }
@@ -337,51 +337,101 @@ namespace DripStatCalculator
             {
                 cursorPowerUpCount++;
                 cursorOutputPerUnit *= Function.Multiplier;
+                if (cursorPowerUpCount == Function.NumberOfCursorUpgrades)
+                {
+                    buttonCursorBuyPowerUp.Enabled = false;
+                    labelCursorUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonBrogrammerBuyPowerUp))
             {
                 brogrammerPowerUpCount++;
                 brogrammerOutputPerUnit *= Function.Multiplier;
+                if (brogrammerPowerUpCount == Function.NumberOfBrogrammerUpgrades)
+                {
+                    buttonBrogrammerBuyPowerUp.Enabled = false;
+                    labelBrogrammerUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonGCFailureBuyPowerUp))
             {
                 gcfailurePowerUpCount++;
                 gcfailureOutputPerUnit *= Function.Multiplier;
+                if (gcfailurePowerUpCount == Function.NumberOfGCFailureUpgrades)
+                {
+                    buttonGCFailureBuyPowerUp.Enabled = false;
+                    labelGCFailureUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonMemoryLeakBuyPowerUp))
             {
                 memoryleakPowerUpCount++;
                 memoryleakOutputPerUnit *= Function.Multiplier;
+                if (memoryleakPowerUpCount == Function.NumberOfMemoryLeakUpgrades)
+                {
+                    buttonMemoryLeakBuyPowerUp.Enabled = false;
+                    labelMemoryLeakUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonMessageQueueBuyPowerUp))
             {
                 messagequeuePowerUpCount++;
                 messagequeueOutputPerUnit *= Function.Multiplier;
+                if (messagequeuePowerUpCount == Function.NumberOfMessageQueueUpgrades)
+                {
+                    buttonMessageQueueBuyPowerUp.Enabled = false;
+                    labelMessageQueueUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonDatabaseBuyPowerUp))
             {
                 databasePowerUpCount++;
                 databaseOutputPerUnit *= Function.Multiplier;
+                if (databasePowerUpCount == Function.NumberOfDatabaseUpgrades)
+                {
+                    buttonDatabaseBuyPowerUp.Enabled = false;
+                    labelDatabaseUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonCacheBuyPowerUp))
             {
                 cachePowerUpCount++;
                 cacheOutputPerUnit *= Function.Multiplier;
+                if (cachePowerUpCount == Function.NumberOfCacheUpgrades)
+                {
+                    buttonCacheBuyPowerUp.Enabled = false;
+                    labelCacheUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonCPUBuyPowerUp))
             {
                 cpuPowerUpCount++;
                 cpuOutputPerUnit *= Function.Multiplier;
+                if (cpuPowerUpCount == Function.NumberOfCPUUpgrades)
+                {
+                    buttonCPUBuyPowerUp.Enabled = false;
+                    labelCPUUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonGPUBuyPowerUp))
             {
                 gpuPowerUpCount++;
                 gpuOutputPerUnit *= Function.Multiplier;
+                if (gpuPowerUpCount == Function.NumberOfGPUUpgrades)
+                {
+                    buttonGPUBuyPowerUp.Enabled = false;
+                    labelGPUUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
             else if (sender.Equals(buttonClusterBuyPowerUp))
             {
                 clusterPowerUpCount++;
                 clusterOutputPerUnit *= Function.Multiplier;
+                if (clusterPowerUpCount == Function.NumberOfClusterUpgrades)
+                {
+                    buttonClusterBuyPowerUp.Enabled = false;
+                    labelClusterUpgradeCost.Text = "All Upgrades Bought!";
+                }
             }
 
             UpdateAll();
@@ -402,12 +452,6 @@ namespace DripStatCalculator
         }
 
         #endregion
-
-        #region Decimal Math
-
-        #endregion
-
-
 
     }
 }
