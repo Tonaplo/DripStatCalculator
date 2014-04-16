@@ -24,29 +24,43 @@ namespace DripStatCalculator
         public static int StartingPriceCluster = 500000000;
 
         //Starting bytes per second
-        public static int StartingBPSCursor = 1;
-        public static int StartingBPSBrogrammer = 3;
-        public static int StartingBPSGCFailure = 5;
-        public static int StartingBPSMemoryLeak = 8;
-        public static int StartingBPSMessageQueue = 15;
-        public static int StartingBPSDatabase = 60;
-        public static int StartingBPSCache = 200;
-        public static int StartingBPSCPU = 0;
-        public static int StartingBPSGPU = 0;
-        public static int StartingBPSCluster = 0;
+        public static decimal StartingBPSCursor = 1.0m;
+        public static decimal StartingBPSBrogrammer = 3.0m;
+        public static decimal StartingBPSGCFailure = 5.0m;
+        public static decimal StartingBPSMemoryLeak = 8.0m;
+        public static decimal StartingBPSMessageQueue = 15.0m;
+        public static decimal StartingBPSDatabase = 60.0m;
+        public static decimal StartingBPSCache = 200.0m;
+        public static decimal StartingBPSCPU = 800.0m;
+        public static decimal StartingBPSGPU = 5000.0m;
+        public static decimal StartingBPSCluster = 1.0m;
 
         public static string Beautify(decimal number)
         {
-            if (number / 1000000000000 > 1)
+            if (number / 1000000000000 >= 1)
                 return decimal.Round(number / 1000000000000, 2).ToString();
-            else if (number / 1000000000 > 1)
+            else if (number / 1000000000 >= 1)
                 return decimal.Round(number / 1000000000, 2).ToString();
-            else if (number / 1000000 > 1)
+            else if (number / 1000000 >= 1)
                 return decimal.Round(number / 1000000, 2).ToString();
-            else if(number / 1000 > 1)
+            else if (number / 1000 >= 1)
                 return decimal.Round(number / 1000, 2).ToString();
 
             return decimal.Round(number, 2).ToString();
+        }
+
+        public static string BeautifyBPS(decimal number)
+        {
+            if (number / 1000000000000 >= 1)
+                return decimal.Round(number / 1000000000000, 2).ToString();
+            else if (number / 1000000000 >= 1)
+                return decimal.Round(number / 1000000000, 2).ToString();
+            else if (number / 1000000 >= 1)
+                return decimal.Round(number / 1000000, 2).ToString();
+            else if (number / 1000 >= 1)
+                return decimal.Round(number / 1000, 2).ToString();
+
+            return decimal.Round(number,2).ToString();
         }
 
         public static decimal BeautifyButKeepLength(decimal number)
@@ -94,6 +108,40 @@ namespace DripStatCalculator
                 return " kb";
 
             return " bytes";
+        }
+
+        public static string AppendCorrectAbbreviationBPS(decimal number)
+        {
+            if (number / 1000000000000 > 1)
+                return " Tb/s";
+
+            else if (number / 1000000000 > 1)
+                return " Gb/s";
+
+            else if (number / 1000000 > 1)
+                return " Mb/s";
+
+            else if (number / 1000 > 1)
+                return " kb/s";
+
+            return " b/s";
+        }
+
+        public static string AppendCorrectAbbreviationCost(decimal number)
+        {
+            if (number / 1000000000000 > 1)
+                return " Tb/bps";
+
+            else if (number / 1000000000 > 1)
+                return " Gb/bps";
+
+            else if (number / 1000000 > 1)
+                return " Mb/bps";
+
+            else if (number / 1000 > 1)
+                return " kb/bps";
+
+            return " b/bps";
         }
     }
 }

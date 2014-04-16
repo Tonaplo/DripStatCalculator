@@ -90,7 +90,7 @@
             this.labelCacheUnitCost = new System.Windows.Forms.Label();
             this.labelDatabaseUnitCost = new System.Windows.Forms.Label();
             this.labelMessageQueueUnitCost = new System.Windows.Forms.Label();
-            this.labelMemoryUnitCost = new System.Windows.Forms.Label();
+            this.labelMemoryLeakUnitCost = new System.Windows.Forms.Label();
             this.labelGCFailureUnitCost = new System.Windows.Forms.Label();
             this.labelBrogrammerUnitCost = new System.Windows.Forms.Label();
             this.labelCursorUnitCost = new System.Windows.Forms.Label();
@@ -138,6 +138,11 @@
             this.labelGCFailurePriceOfOne = new System.Windows.Forms.Label();
             this.labelBrogrammerPriceOfOne = new System.Windows.Forms.Label();
             this.labelCursorPriceOfOne = new System.Windows.Forms.Label();
+            this.labelBPSFromClicks = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelTotalBPS = new System.Windows.Forms.Label();
+            this.labelRecommendation = new System.Windows.Forms.Label();
+            this.textBoxClicksPerSecond = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelCursor
@@ -828,16 +833,16 @@
             this.labelMessageQueueUnitCost.Text = "0";
             this.labelMessageQueueUnitCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelMemoryUnitCost
+            // labelMemoryLeakUnitCost
             // 
-            this.labelMemoryUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMemoryUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMemoryUnitCost.Location = new System.Drawing.Point(742, 128);
-            this.labelMemoryUnitCost.Name = "labelMemoryUnitCost";
-            this.labelMemoryUnitCost.Size = new System.Drawing.Size(169, 23);
-            this.labelMemoryUnitCost.TabIndex = 58;
-            this.labelMemoryUnitCost.Text = "0";
-            this.labelMemoryUnitCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMemoryLeakUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMemoryLeakUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMemoryLeakUnitCost.Location = new System.Drawing.Point(742, 128);
+            this.labelMemoryLeakUnitCost.Name = "labelMemoryLeakUnitCost";
+            this.labelMemoryLeakUnitCost.Size = new System.Drawing.Size(169, 23);
+            this.labelMemoryLeakUnitCost.TabIndex = 58;
+            this.labelMemoryLeakUnitCost.Text = "0";
+            this.labelMemoryLeakUnitCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelGCFailureUnitCost
             // 
@@ -1209,7 +1214,7 @@
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(256, 313);
+            this.label2.Location = new System.Drawing.Point(12, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 98;
@@ -1338,11 +1343,70 @@
             this.labelCursorPriceOfOne.Text = "0";
             this.labelCursorPriceOfOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelBPSFromClicks
+            // 
+            this.labelBPSFromClicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelBPSFromClicks.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 336);
+            this.labelBPSFromClicks.Name = "labelBPSFromClicks";
+            this.labelBPSFromClicks.Size = new System.Drawing.Size(93, 23);
+            this.labelBPSFromClicks.TabIndex = 111;
+            this.labelBPSFromClicks.Text = "0";
+            this.labelBPSFromClicks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 359);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 23);
+            this.label3.TabIndex = 112;
+            this.label3.Text = "Total BPS:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTotalBPS
+            // 
+            this.labelTotalBPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTotalBPS.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalBPS.Location = new System.Drawing.Point(184, 359);
+            this.labelTotalBPS.Name = "labelTotalBPS";
+            this.labelTotalBPS.Size = new System.Drawing.Size(93, 23);
+            this.labelTotalBPS.TabIndex = 113;
+            this.labelTotalBPS.Text = "0";
+            this.labelTotalBPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRecommendation
+            // 
+            this.labelRecommendation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelRecommendation.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecommendation.Location = new System.Drawing.Point(308, 313);
+            this.labelRecommendation.Name = "labelRecommendation";
+            this.labelRecommendation.Size = new System.Drawing.Size(745, 67);
+            this.labelRecommendation.TabIndex = 114;
+            this.labelRecommendation.Text = "You should now buy a X for optimal BPS increase.";
+            this.labelRecommendation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxClicksPerSecond
+            // 
+            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 313);
+            this.textBoxClicksPerSecond.MaxLength = 5;
+            this.textBoxClicksPerSecond.Name = "textBoxClicksPerSecond";
+            this.textBoxClicksPerSecond.Size = new System.Drawing.Size(93, 20);
+            this.textBoxClicksPerSecond.TabIndex = 115;
+            this.textBoxClicksPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxClicksPerSecond.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // DripStatCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 379);
+            this.ClientSize = new System.Drawing.Size(1058, 415);
+            this.Controls.Add(this.textBoxClicksPerSecond);
+            this.Controls.Add(this.labelRecommendation);
+            this.Controls.Add(this.labelTotalBPS);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelBPSFromClicks);
             this.Controls.Add(this.labelUnitPriceMain);
             this.Controls.Add(this.labelClusterPriceOfOne);
             this.Controls.Add(this.labelGPUPriceOfOne);
@@ -1394,7 +1458,7 @@
             this.Controls.Add(this.labelCacheUnitCost);
             this.Controls.Add(this.labelDatabaseUnitCost);
             this.Controls.Add(this.labelMessageQueueUnitCost);
-            this.Controls.Add(this.labelMemoryUnitCost);
+            this.Controls.Add(this.labelMemoryLeakUnitCost);
             this.Controls.Add(this.labelGCFailureUnitCost);
             this.Controls.Add(this.labelBrogrammerUnitCost);
             this.Controls.Add(this.labelCursorUnitCost);
@@ -1457,6 +1521,7 @@
             this.Text = "DripStatCalculator";
             this.Load += new System.EventHandler(this.DripStatCalculator_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1524,7 +1589,7 @@
         private System.Windows.Forms.Label labelCacheUnitCost;
         private System.Windows.Forms.Label labelDatabaseUnitCost;
         private System.Windows.Forms.Label labelMessageQueueUnitCost;
-        private System.Windows.Forms.Label labelMemoryUnitCost;
+        private System.Windows.Forms.Label labelMemoryLeakUnitCost;
         private System.Windows.Forms.Label labelGCFailureUnitCost;
         private System.Windows.Forms.Label labelBrogrammerUnitCost;
         private System.Windows.Forms.Label labelCursorUnitCost;
@@ -1572,6 +1637,11 @@
         private System.Windows.Forms.Label labelGCFailurePriceOfOne;
         private System.Windows.Forms.Label labelBrogrammerPriceOfOne;
         private System.Windows.Forms.Label labelCursorPriceOfOne;
+        private System.Windows.Forms.Label labelBPSFromClicks;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTotalBPS;
+        private System.Windows.Forms.Label labelRecommendation;
+        private System.Windows.Forms.TextBox textBoxClicksPerSecond;
     }
 }
 
