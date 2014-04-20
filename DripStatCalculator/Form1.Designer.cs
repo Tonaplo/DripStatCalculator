@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DripStatCalculator));
             this.labelCursor = new System.Windows.Forms.Label();
             this.labelBrogrammer = new System.Windows.Forms.Label();
             this.labelGCFailure = new System.Windows.Forms.Label();
@@ -143,6 +144,29 @@
             this.labelTotalBPS = new System.Windows.Forms.Label();
             this.labelRecommendation = new System.Windows.Forms.Label();
             this.textBoxClicksPerSecond = new System.Windows.Forms.TextBox();
+            this.labelSpendingMain = new System.Windows.Forms.Label();
+            this.labelSpendingNumber = new System.Windows.Forms.Label();
+            this.buttonResetSpendings = new System.Windows.Forms.Button();
+            this.labelPowerUpPriceMain = new System.Windows.Forms.Label();
+            this.labelClusterPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelGPUPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelCPUPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelCachePriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelDatabasePriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelMessageQueuePriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelMemoryLeakPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelGCFailurePriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelBrogrammerPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelCursorPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.textBoxCapacity = new System.Windows.Forms.TextBox();
+            this.labelCapacityMain = new System.Windows.Forms.Label();
+            this.labelTimeTakeMain = new System.Windows.Forms.Label();
+            this.labelTimeTakenReal = new System.Windows.Forms.Label();
+            this.buttonFAQ = new System.Windows.Forms.Button();
+            this.labelFutureSpendingNumber = new System.Windows.Forms.Label();
+            this.labelFutureSpendingMain = new System.Windows.Forms.Label();
+            this.buttonResetAll = new System.Windows.Forms.Button();
+            this.buttonBugReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCursor
@@ -760,7 +784,7 @@
             this.labelCostUnitMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCostUnitMain.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCostUnitMain.Location = new System.Drawing.Point(742, 0);
+            this.labelCostUnitMain.Location = new System.Drawing.Point(867, 0);
             this.labelCostUnitMain.Name = "labelCostUnitMain";
             this.labelCostUnitMain.Size = new System.Drawing.Size(169, 57);
             this.labelCostUnitMain.TabIndex = 65;
@@ -771,7 +795,7 @@
             // 
             this.labelClusterUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelClusterUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClusterUnitCost.Location = new System.Drawing.Point(742, 266);
+            this.labelClusterUnitCost.Location = new System.Drawing.Point(867, 266);
             this.labelClusterUnitCost.Name = "labelClusterUnitCost";
             this.labelClusterUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelClusterUnitCost.TabIndex = 64;
@@ -782,7 +806,7 @@
             // 
             this.labelGPUUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGPUUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGPUUnitCost.Location = new System.Drawing.Point(742, 243);
+            this.labelGPUUnitCost.Location = new System.Drawing.Point(867, 243);
             this.labelGPUUnitCost.Name = "labelGPUUnitCost";
             this.labelGPUUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelGPUUnitCost.TabIndex = 63;
@@ -793,7 +817,7 @@
             // 
             this.labelCPUUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCPUUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCPUUnitCost.Location = new System.Drawing.Point(742, 220);
+            this.labelCPUUnitCost.Location = new System.Drawing.Point(867, 220);
             this.labelCPUUnitCost.Name = "labelCPUUnitCost";
             this.labelCPUUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelCPUUnitCost.TabIndex = 62;
@@ -804,7 +828,7 @@
             // 
             this.labelCacheUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCacheUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCacheUnitCost.Location = new System.Drawing.Point(742, 197);
+            this.labelCacheUnitCost.Location = new System.Drawing.Point(867, 197);
             this.labelCacheUnitCost.Name = "labelCacheUnitCost";
             this.labelCacheUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelCacheUnitCost.TabIndex = 61;
@@ -815,7 +839,7 @@
             // 
             this.labelDatabaseUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDatabaseUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatabaseUnitCost.Location = new System.Drawing.Point(742, 174);
+            this.labelDatabaseUnitCost.Location = new System.Drawing.Point(867, 174);
             this.labelDatabaseUnitCost.Name = "labelDatabaseUnitCost";
             this.labelDatabaseUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelDatabaseUnitCost.TabIndex = 60;
@@ -826,7 +850,7 @@
             // 
             this.labelMessageQueueUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelMessageQueueUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessageQueueUnitCost.Location = new System.Drawing.Point(742, 151);
+            this.labelMessageQueueUnitCost.Location = new System.Drawing.Point(867, 151);
             this.labelMessageQueueUnitCost.Name = "labelMessageQueueUnitCost";
             this.labelMessageQueueUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelMessageQueueUnitCost.TabIndex = 59;
@@ -837,7 +861,7 @@
             // 
             this.labelMemoryLeakUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelMemoryLeakUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMemoryLeakUnitCost.Location = new System.Drawing.Point(742, 128);
+            this.labelMemoryLeakUnitCost.Location = new System.Drawing.Point(867, 128);
             this.labelMemoryLeakUnitCost.Name = "labelMemoryLeakUnitCost";
             this.labelMemoryLeakUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelMemoryLeakUnitCost.TabIndex = 58;
@@ -848,7 +872,7 @@
             // 
             this.labelGCFailureUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGCFailureUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGCFailureUnitCost.Location = new System.Drawing.Point(742, 105);
+            this.labelGCFailureUnitCost.Location = new System.Drawing.Point(867, 105);
             this.labelGCFailureUnitCost.Name = "labelGCFailureUnitCost";
             this.labelGCFailureUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelGCFailureUnitCost.TabIndex = 57;
@@ -859,7 +883,7 @@
             // 
             this.labelBrogrammerUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBrogrammerUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrogrammerUnitCost.Location = new System.Drawing.Point(742, 82);
+            this.labelBrogrammerUnitCost.Location = new System.Drawing.Point(867, 82);
             this.labelBrogrammerUnitCost.Name = "labelBrogrammerUnitCost";
             this.labelBrogrammerUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelBrogrammerUnitCost.TabIndex = 56;
@@ -870,7 +894,7 @@
             // 
             this.labelCursorUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCursorUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursorUnitCost.Location = new System.Drawing.Point(742, 59);
+            this.labelCursorUnitCost.Location = new System.Drawing.Point(867, 59);
             this.labelCursorUnitCost.Name = "labelCursorUnitCost";
             this.labelCursorUnitCost.Size = new System.Drawing.Size(169, 23);
             this.labelCursorUnitCost.TabIndex = 55;
@@ -882,7 +906,7 @@
             this.labelCostPowerUpMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCostPowerUpMain.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCostPowerUpMain.Location = new System.Drawing.Point(917, 0);
+            this.labelCostPowerUpMain.Location = new System.Drawing.Point(1042, 0);
             this.labelCostPowerUpMain.Name = "labelCostPowerUpMain";
             this.labelCostPowerUpMain.Size = new System.Drawing.Size(136, 57);
             this.labelCostPowerUpMain.TabIndex = 76;
@@ -893,7 +917,7 @@
             // 
             this.labelClusterUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelClusterUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClusterUpgradeCost.Location = new System.Drawing.Point(917, 266);
+            this.labelClusterUpgradeCost.Location = new System.Drawing.Point(1042, 266);
             this.labelClusterUpgradeCost.Name = "labelClusterUpgradeCost";
             this.labelClusterUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelClusterUpgradeCost.TabIndex = 75;
@@ -904,7 +928,7 @@
             // 
             this.labelGPUUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGPUUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGPUUpgradeCost.Location = new System.Drawing.Point(917, 243);
+            this.labelGPUUpgradeCost.Location = new System.Drawing.Point(1042, 243);
             this.labelGPUUpgradeCost.Name = "labelGPUUpgradeCost";
             this.labelGPUUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelGPUUpgradeCost.TabIndex = 74;
@@ -915,7 +939,7 @@
             // 
             this.labelCPUUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCPUUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCPUUpgradeCost.Location = new System.Drawing.Point(917, 220);
+            this.labelCPUUpgradeCost.Location = new System.Drawing.Point(1042, 220);
             this.labelCPUUpgradeCost.Name = "labelCPUUpgradeCost";
             this.labelCPUUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelCPUUpgradeCost.TabIndex = 73;
@@ -926,7 +950,7 @@
             // 
             this.labelCacheUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCacheUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCacheUpgradeCost.Location = new System.Drawing.Point(917, 197);
+            this.labelCacheUpgradeCost.Location = new System.Drawing.Point(1042, 197);
             this.labelCacheUpgradeCost.Name = "labelCacheUpgradeCost";
             this.labelCacheUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelCacheUpgradeCost.TabIndex = 72;
@@ -937,7 +961,7 @@
             // 
             this.labelDatabaseUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDatabaseUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatabaseUpgradeCost.Location = new System.Drawing.Point(917, 174);
+            this.labelDatabaseUpgradeCost.Location = new System.Drawing.Point(1042, 174);
             this.labelDatabaseUpgradeCost.Name = "labelDatabaseUpgradeCost";
             this.labelDatabaseUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelDatabaseUpgradeCost.TabIndex = 71;
@@ -948,7 +972,7 @@
             // 
             this.labelMessageQueueUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelMessageQueueUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessageQueueUpgradeCost.Location = new System.Drawing.Point(917, 151);
+            this.labelMessageQueueUpgradeCost.Location = new System.Drawing.Point(1042, 151);
             this.labelMessageQueueUpgradeCost.Name = "labelMessageQueueUpgradeCost";
             this.labelMessageQueueUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelMessageQueueUpgradeCost.TabIndex = 70;
@@ -959,7 +983,7 @@
             // 
             this.labelMemoryLeakUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelMemoryLeakUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMemoryLeakUpgradeCost.Location = new System.Drawing.Point(917, 128);
+            this.labelMemoryLeakUpgradeCost.Location = new System.Drawing.Point(1042, 128);
             this.labelMemoryLeakUpgradeCost.Name = "labelMemoryLeakUpgradeCost";
             this.labelMemoryLeakUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelMemoryLeakUpgradeCost.TabIndex = 69;
@@ -970,7 +994,7 @@
             // 
             this.labelGCFailureUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGCFailureUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGCFailureUpgradeCost.Location = new System.Drawing.Point(917, 105);
+            this.labelGCFailureUpgradeCost.Location = new System.Drawing.Point(1042, 105);
             this.labelGCFailureUpgradeCost.Name = "labelGCFailureUpgradeCost";
             this.labelGCFailureUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelGCFailureUpgradeCost.TabIndex = 68;
@@ -981,7 +1005,7 @@
             // 
             this.labelBrogrammerUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBrogrammerUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrogrammerUpgradeCost.Location = new System.Drawing.Point(917, 82);
+            this.labelBrogrammerUpgradeCost.Location = new System.Drawing.Point(1042, 82);
             this.labelBrogrammerUpgradeCost.Name = "labelBrogrammerUpgradeCost";
             this.labelBrogrammerUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelBrogrammerUpgradeCost.TabIndex = 67;
@@ -992,7 +1016,7 @@
             // 
             this.labelCursorUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCursorUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursorUpgradeCost.Location = new System.Drawing.Point(917, 59);
+            this.labelCursorUpgradeCost.Location = new System.Drawing.Point(1042, 59);
             this.labelCursorUpgradeCost.Name = "labelCursorUpgradeCost";
             this.labelCursorUpgradeCost.Size = new System.Drawing.Size(136, 23);
             this.labelCursorUpgradeCost.TabIndex = 66;
@@ -1203,7 +1227,7 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 313);
+            this.label1.Location = new System.Drawing.Point(12, 310);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 23);
             this.label1.TabIndex = 97;
@@ -1214,7 +1238,7 @@
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 336);
+            this.label2.Location = new System.Drawing.Point(12, 333);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 98;
@@ -1347,7 +1371,7 @@
             // 
             this.labelBPSFromClicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBPSFromClicks.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 336);
+            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 333);
             this.labelBPSFromClicks.Name = "labelBPSFromClicks";
             this.labelBPSFromClicks.Size = new System.Drawing.Size(118, 23);
             this.labelBPSFromClicks.TabIndex = 111;
@@ -1358,7 +1382,7 @@
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 359);
+            this.label3.Location = new System.Drawing.Point(12, 356);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 23);
             this.label3.TabIndex = 112;
@@ -1369,7 +1393,7 @@
             // 
             this.labelTotalBPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTotalBPS.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalBPS.Location = new System.Drawing.Point(184, 359);
+            this.labelTotalBPS.Location = new System.Drawing.Point(184, 356);
             this.labelTotalBPS.Name = "labelTotalBPS";
             this.labelTotalBPS.Size = new System.Drawing.Size(118, 23);
             this.labelTotalBPS.TabIndex = 113;
@@ -1379,29 +1403,303 @@
             // labelRecommendation
             // 
             this.labelRecommendation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelRecommendation.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecommendation.Location = new System.Drawing.Point(308, 313);
+            this.labelRecommendation.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecommendation.Location = new System.Drawing.Point(433, 307);
             this.labelRecommendation.Name = "labelRecommendation";
-            this.labelRecommendation.Size = new System.Drawing.Size(745, 69);
+            this.labelRecommendation.Size = new System.Drawing.Size(745, 46);
             this.labelRecommendation.TabIndex = 114;
             this.labelRecommendation.Text = "You should now buy a X for optimal BPS increase.";
             this.labelRecommendation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxClicksPerSecond
             // 
-            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 313);
+            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 310);
             this.textBoxClicksPerSecond.MaxLength = 5;
             this.textBoxClicksPerSecond.Name = "textBoxClicksPerSecond";
             this.textBoxClicksPerSecond.Size = new System.Drawing.Size(118, 20);
             this.textBoxClicksPerSecond.TabIndex = 115;
+            this.textBoxClicksPerSecond.Text = "2";
             this.textBoxClicksPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxClicksPerSecond.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // labelSpendingMain
+            // 
+            this.labelSpendingMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpendingMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpendingMain.Location = new System.Drawing.Point(433, 353);
+            this.labelSpendingMain.Name = "labelSpendingMain";
+            this.labelSpendingMain.Size = new System.Drawing.Size(428, 24);
+            this.labelSpendingMain.TabIndex = 116;
+            this.labelSpendingMain.Text = "Since last reset of spending bytes, you have spent:";
+            this.labelSpendingMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpendingNumber
+            // 
+            this.labelSpendingNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpendingNumber.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpendingNumber.Location = new System.Drawing.Point(867, 353);
+            this.labelSpendingNumber.Name = "labelSpendingNumber";
+            this.labelSpendingNumber.Size = new System.Drawing.Size(169, 24);
+            this.labelSpendingNumber.TabIndex = 117;
+            this.labelSpendingNumber.Text = "0";
+            this.labelSpendingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonResetSpendings
+            // 
+            this.buttonResetSpendings.Location = new System.Drawing.Point(1042, 353);
+            this.buttonResetSpendings.Name = "buttonResetSpendings";
+            this.buttonResetSpendings.Size = new System.Drawing.Size(107, 23);
+            this.buttonResetSpendings.TabIndex = 118;
+            this.buttonResetSpendings.Text = "Reset Spendings";
+            this.buttonResetSpendings.UseVisualStyleBackColor = true;
+            this.buttonResetSpendings.Click += new System.EventHandler(this.buttonResetSpendings_Click);
+            // 
+            // labelPowerUpPriceMain
+            // 
+            this.labelPowerUpPriceMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelPowerUpPriceMain.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPowerUpPriceMain.Location = new System.Drawing.Point(742, 0);
+            this.labelPowerUpPriceMain.Name = "labelPowerUpPriceMain";
+            this.labelPowerUpPriceMain.Size = new System.Drawing.Size(119, 57);
+            this.labelPowerUpPriceMain.TabIndex = 129;
+            this.labelPowerUpPriceMain.Text = "Cost of next upgrade:";
+            this.labelPowerUpPriceMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelClusterPriceOfPowerUp
+            // 
+            this.labelClusterPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelClusterPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClusterPriceOfPowerUp.Location = new System.Drawing.Point(742, 266);
+            this.labelClusterPriceOfPowerUp.Name = "labelClusterPriceOfPowerUp";
+            this.labelClusterPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelClusterPriceOfPowerUp.TabIndex = 128;
+            this.labelClusterPriceOfPowerUp.Text = "0";
+            this.labelClusterPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGPUPriceOfPowerUp
+            // 
+            this.labelGPUPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelGPUPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGPUPriceOfPowerUp.Location = new System.Drawing.Point(742, 243);
+            this.labelGPUPriceOfPowerUp.Name = "labelGPUPriceOfPowerUp";
+            this.labelGPUPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelGPUPriceOfPowerUp.TabIndex = 127;
+            this.labelGPUPriceOfPowerUp.Text = "0";
+            this.labelGPUPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCPUPriceOfPowerUp
+            // 
+            this.labelCPUPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCPUPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCPUPriceOfPowerUp.Location = new System.Drawing.Point(742, 220);
+            this.labelCPUPriceOfPowerUp.Name = "labelCPUPriceOfPowerUp";
+            this.labelCPUPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelCPUPriceOfPowerUp.TabIndex = 126;
+            this.labelCPUPriceOfPowerUp.Text = "0";
+            this.labelCPUPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCachePriceOfPowerUp
+            // 
+            this.labelCachePriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCachePriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCachePriceOfPowerUp.Location = new System.Drawing.Point(742, 197);
+            this.labelCachePriceOfPowerUp.Name = "labelCachePriceOfPowerUp";
+            this.labelCachePriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelCachePriceOfPowerUp.TabIndex = 125;
+            this.labelCachePriceOfPowerUp.Text = "0";
+            this.labelCachePriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelDatabasePriceOfPowerUp
+            // 
+            this.labelDatabasePriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDatabasePriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatabasePriceOfPowerUp.Location = new System.Drawing.Point(742, 174);
+            this.labelDatabasePriceOfPowerUp.Name = "labelDatabasePriceOfPowerUp";
+            this.labelDatabasePriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelDatabasePriceOfPowerUp.TabIndex = 124;
+            this.labelDatabasePriceOfPowerUp.Text = "0";
+            this.labelDatabasePriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMessageQueuePriceOfPowerUp
+            // 
+            this.labelMessageQueuePriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMessageQueuePriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessageQueuePriceOfPowerUp.Location = new System.Drawing.Point(742, 151);
+            this.labelMessageQueuePriceOfPowerUp.Name = "labelMessageQueuePriceOfPowerUp";
+            this.labelMessageQueuePriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelMessageQueuePriceOfPowerUp.TabIndex = 123;
+            this.labelMessageQueuePriceOfPowerUp.Text = "0";
+            this.labelMessageQueuePriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMemoryLeakPriceOfPowerUp
+            // 
+            this.labelMemoryLeakPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMemoryLeakPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMemoryLeakPriceOfPowerUp.Location = new System.Drawing.Point(742, 128);
+            this.labelMemoryLeakPriceOfPowerUp.Name = "labelMemoryLeakPriceOfPowerUp";
+            this.labelMemoryLeakPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelMemoryLeakPriceOfPowerUp.TabIndex = 122;
+            this.labelMemoryLeakPriceOfPowerUp.Text = "0";
+            this.labelMemoryLeakPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGCFailurePriceOfPowerUp
+            // 
+            this.labelGCFailurePriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelGCFailurePriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGCFailurePriceOfPowerUp.Location = new System.Drawing.Point(742, 105);
+            this.labelGCFailurePriceOfPowerUp.Name = "labelGCFailurePriceOfPowerUp";
+            this.labelGCFailurePriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelGCFailurePriceOfPowerUp.TabIndex = 121;
+            this.labelGCFailurePriceOfPowerUp.Text = "0";
+            this.labelGCFailurePriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelBrogrammerPriceOfPowerUp
+            // 
+            this.labelBrogrammerPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelBrogrammerPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrogrammerPriceOfPowerUp.Location = new System.Drawing.Point(742, 82);
+            this.labelBrogrammerPriceOfPowerUp.Name = "labelBrogrammerPriceOfPowerUp";
+            this.labelBrogrammerPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelBrogrammerPriceOfPowerUp.TabIndex = 120;
+            this.labelBrogrammerPriceOfPowerUp.Text = "0";
+            this.labelBrogrammerPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCursorPriceOfPowerUp
+            // 
+            this.labelCursorPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCursorPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursorPriceOfPowerUp.Location = new System.Drawing.Point(742, 59);
+            this.labelCursorPriceOfPowerUp.Name = "labelCursorPriceOfPowerUp";
+            this.labelCursorPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelCursorPriceOfPowerUp.TabIndex = 119;
+            this.labelCursorPriceOfPowerUp.Text = "0";
+            this.labelCursorPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxCapacity
+            // 
+            this.textBoxCapacity.Location = new System.Drawing.Point(184, 379);
+            this.textBoxCapacity.MaxLength = 300;
+            this.textBoxCapacity.Name = "textBoxCapacity";
+            this.textBoxCapacity.Size = new System.Drawing.Size(118, 20);
+            this.textBoxCapacity.TabIndex = 131;
+            this.textBoxCapacity.Text = "0";
+            this.textBoxCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCapacity.TextChanged += new System.EventHandler(this.textBoxCapacity_TextChanged);
+            // 
+            // labelCapacityMain
+            // 
+            this.labelCapacityMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCapacityMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCapacityMain.Location = new System.Drawing.Point(12, 379);
+            this.labelCapacityMain.Name = "labelCapacityMain";
+            this.labelCapacityMain.Size = new System.Drawing.Size(166, 23);
+            this.labelCapacityMain.TabIndex = 130;
+            this.labelCapacityMain.Text = "Capacity in bytes:";
+            this.labelCapacityMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTimeTakeMain
+            // 
+            this.labelTimeTakeMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTimeTakeMain.Font = new System.Drawing.Font("Arial Black", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimeTakeMain.Location = new System.Drawing.Point(308, 307);
+            this.labelTimeTakeMain.Name = "labelTimeTakeMain";
+            this.labelTimeTakeMain.Size = new System.Drawing.Size(114, 34);
+            this.labelTimeTakeMain.TabIndex = 132;
+            this.labelTimeTakeMain.Text = "Empty to Full capacity will take:";
+            this.labelTimeTakeMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTimeTakenReal
+            // 
+            this.labelTimeTakenReal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTimeTakenReal.Font = new System.Drawing.Font("Arial Black", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimeTakenReal.Location = new System.Drawing.Point(308, 341);
+            this.labelTimeTakenReal.Name = "labelTimeTakenReal";
+            this.labelTimeTakenReal.Size = new System.Drawing.Size(114, 58);
+            this.labelTimeTakenReal.TabIndex = 133;
+            this.labelTimeTakenReal.Text = "0 Hours.";
+            this.labelTimeTakenReal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonFAQ
+            // 
+            this.buttonFAQ.Location = new System.Drawing.Point(1155, 353);
+            this.buttonFAQ.Name = "buttonFAQ";
+            this.buttonFAQ.Size = new System.Drawing.Size(23, 23);
+            this.buttonFAQ.TabIndex = 134;
+            this.buttonFAQ.Text = "?";
+            this.buttonFAQ.UseVisualStyleBackColor = true;
+            this.buttonFAQ.Click += new System.EventHandler(this.buttonFAQ_Click);
+            // 
+            // labelFutureSpendingNumber
+            // 
+            this.labelFutureSpendingNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelFutureSpendingNumber.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFutureSpendingNumber.Location = new System.Drawing.Point(867, 375);
+            this.labelFutureSpendingNumber.Name = "labelFutureSpendingNumber";
+            this.labelFutureSpendingNumber.Size = new System.Drawing.Size(169, 24);
+            this.labelFutureSpendingNumber.TabIndex = 136;
+            this.labelFutureSpendingNumber.Text = "0";
+            this.labelFutureSpendingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFutureSpendingMain
+            // 
+            this.labelFutureSpendingMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelFutureSpendingMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFutureSpendingMain.Location = new System.Drawing.Point(433, 375);
+            this.labelFutureSpendingMain.Name = "labelFutureSpendingMain";
+            this.labelFutureSpendingMain.Size = new System.Drawing.Size(428, 24);
+            this.labelFutureSpendingMain.TabIndex = 135;
+            this.labelFutureSpendingMain.Text = "Buying the next item, you will have spent:";
+            this.labelFutureSpendingMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonResetAll
+            // 
+            this.buttonResetAll.Location = new System.Drawing.Point(1042, 376);
+            this.buttonResetAll.Name = "buttonResetAll";
+            this.buttonResetAll.Size = new System.Drawing.Size(107, 23);
+            this.buttonResetAll.TabIndex = 137;
+            this.buttonResetAll.Text = "Reset ALL";
+            this.buttonResetAll.UseVisualStyleBackColor = true;
+            this.buttonResetAll.Click += new System.EventHandler(this.buttonResetAll_Click);
+            // 
+            // buttonBugReport
+            // 
+            this.buttonBugReport.Location = new System.Drawing.Point(1155, 375);
+            this.buttonBugReport.Name = "buttonBugReport";
+            this.buttonBugReport.Size = new System.Drawing.Size(23, 23);
+            this.buttonBugReport.TabIndex = 138;
+            this.buttonBugReport.Text = "!";
+            this.buttonBugReport.UseVisualStyleBackColor = true;
+            this.buttonBugReport.Click += new System.EventHandler(this.buttonBugReport_Click);
             // 
             // DripStatCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 389);
+            this.ClientSize = new System.Drawing.Size(1188, 404);
+            this.Controls.Add(this.buttonBugReport);
+            this.Controls.Add(this.buttonResetAll);
+            this.Controls.Add(this.labelFutureSpendingNumber);
+            this.Controls.Add(this.labelFutureSpendingMain);
+            this.Controls.Add(this.buttonFAQ);
+            this.Controls.Add(this.labelTimeTakenReal);
+            this.Controls.Add(this.labelTimeTakeMain);
+            this.Controls.Add(this.textBoxCapacity);
+            this.Controls.Add(this.labelCapacityMain);
+            this.Controls.Add(this.labelPowerUpPriceMain);
+            this.Controls.Add(this.labelClusterPriceOfPowerUp);
+            this.Controls.Add(this.labelGPUPriceOfPowerUp);
+            this.Controls.Add(this.labelCPUPriceOfPowerUp);
+            this.Controls.Add(this.labelCachePriceOfPowerUp);
+            this.Controls.Add(this.labelDatabasePriceOfPowerUp);
+            this.Controls.Add(this.labelMessageQueuePriceOfPowerUp);
+            this.Controls.Add(this.labelMemoryLeakPriceOfPowerUp);
+            this.Controls.Add(this.labelGCFailurePriceOfPowerUp);
+            this.Controls.Add(this.labelBrogrammerPriceOfPowerUp);
+            this.Controls.Add(this.labelCursorPriceOfPowerUp);
+            this.Controls.Add(this.buttonResetSpendings);
+            this.Controls.Add(this.labelSpendingNumber);
+            this.Controls.Add(this.labelSpendingMain);
             this.Controls.Add(this.textBoxClicksPerSecond);
             this.Controls.Add(this.labelRecommendation);
             this.Controls.Add(this.labelTotalBPS);
@@ -1517,9 +1815,11 @@
             this.Controls.Add(this.labelGCFailure);
             this.Controls.Add(this.labelBrogrammer);
             this.Controls.Add(this.labelCursor);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DripStatCalculator";
-            this.Text = "DripStatCalculator";
+            this.Text = "DripStat Calculator";
             this.Load += new System.EventHandler(this.DripStatCalculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1643,6 +1943,29 @@
         private System.Windows.Forms.Label labelTotalBPS;
         private System.Windows.Forms.Label labelRecommendation;
         private System.Windows.Forms.TextBox textBoxClicksPerSecond;
+        private System.Windows.Forms.Label labelSpendingMain;
+        private System.Windows.Forms.Label labelSpendingNumber;
+        private System.Windows.Forms.Button buttonResetSpendings;
+        private System.Windows.Forms.Label labelPowerUpPriceMain;
+        private System.Windows.Forms.Label labelClusterPriceOfPowerUp;
+        private System.Windows.Forms.Label labelGPUPriceOfPowerUp;
+        private System.Windows.Forms.Label labelCPUPriceOfPowerUp;
+        private System.Windows.Forms.Label labelCachePriceOfPowerUp;
+        private System.Windows.Forms.Label labelDatabasePriceOfPowerUp;
+        private System.Windows.Forms.Label labelMessageQueuePriceOfPowerUp;
+        private System.Windows.Forms.Label labelMemoryLeakPriceOfPowerUp;
+        private System.Windows.Forms.Label labelGCFailurePriceOfPowerUp;
+        private System.Windows.Forms.Label labelBrogrammerPriceOfPowerUp;
+        private System.Windows.Forms.Label labelCursorPriceOfPowerUp;
+        private System.Windows.Forms.TextBox textBoxCapacity;
+        private System.Windows.Forms.Label labelCapacityMain;
+        private System.Windows.Forms.Label labelTimeTakeMain;
+        private System.Windows.Forms.Label labelTimeTakenReal;
+        private System.Windows.Forms.Button buttonFAQ;
+        private System.Windows.Forms.Label labelFutureSpendingNumber;
+        private System.Windows.Forms.Label labelFutureSpendingMain;
+        private System.Windows.Forms.Button buttonResetAll;
+        private System.Windows.Forms.Button buttonBugReport;
     }
 }
 
