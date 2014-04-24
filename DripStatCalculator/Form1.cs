@@ -415,13 +415,13 @@ namespace DripStatCalculator
                 }
                 else if (gcfailurePowerUpCount == 1)
                 {
-                    labelGCFailureUpgradeCost.Text = Function.Beautify(Function.GCFailureUpgrade1 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.GCFailureUpgrade1 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m));
-                    labelGCFailurePriceOfPowerUp.Text = Function.Beautify(Function.GCFailureUpgrade1) + Function.AppendCorrectAbbreviation(Function.GCFailureUpgrade1);
-                    if (currentLowest > Function.GCFailureUpgrade1 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m))
+                    labelGCFailureUpgradeCost.Text = Function.Beautify(Function.GCFailureUpgrade2 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.GCFailureUpgrade2 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m));
+                    labelGCFailurePriceOfPowerUp.Text = Function.Beautify(Function.GCFailureUpgrade2) + Function.AppendCorrectAbbreviation(Function.GCFailureUpgrade2);
+                    if (currentLowest > Function.GCFailureUpgrade2 / (gcfailureOutputPerUnit * gcfailureUnitCount  * 0.1m))
                     {
                         labelRecommendation.Text = "You should now buy a GC Failure Power Up for optimal BPS increase.";
                         priceOfNext = (long)Function.GCFailureUpgrade2;
-                        currentLowest = Function.GCFailureUpgrade1 / (gcfailureOutputPerUnit * gcfailureUnitCount);
+                        currentLowest = Function.GCFailureUpgrade2 / (gcfailureOutputPerUnit * gcfailureUnitCount);
                     }
                 }
                 else if (gcfailurePowerUpCount == 2)
@@ -1255,6 +1255,7 @@ namespace DripStatCalculator
             labelClusterUpgradeCost.Text = "0";
 
             bytesSpent = 0;
+            priceOfNext = 0;
 
             UpdateAll();
         }
@@ -1527,7 +1528,8 @@ namespace DripStatCalculator
 
         private void buttonFAQ_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("This program is updated for Level 4 of the DripStat Game at www.dripstat.com/game. Updates will come when new levels are available.");
+            System.Windows.Forms.MessageBox.Show("This program is updated for Level 4 of the DripStat Game at www.dripstat.com/game. Updates will come when new levels are available." 
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.1:" + Environment.NewLine + "- Fixed a bug causing upgrades for GC Failures Level 2 to be too desirable.");
         }
 
         private void buttonResetAll_Click(object sender, EventArgs e)

@@ -1227,7 +1227,7 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 310);
+            this.label1.Location = new System.Drawing.Point(12, 307);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 23);
             this.label1.TabIndex = 97;
@@ -1238,7 +1238,7 @@
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 333);
+            this.label2.Location = new System.Drawing.Point(12, 330);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 98;
@@ -1371,7 +1371,7 @@
             // 
             this.labelBPSFromClicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBPSFromClicks.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 333);
+            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 330);
             this.labelBPSFromClicks.Name = "labelBPSFromClicks";
             this.labelBPSFromClicks.Size = new System.Drawing.Size(118, 23);
             this.labelBPSFromClicks.TabIndex = 111;
@@ -1382,7 +1382,7 @@
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 356);
+            this.label3.Location = new System.Drawing.Point(12, 353);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 23);
             this.label3.TabIndex = 112;
@@ -1393,7 +1393,7 @@
             // 
             this.labelTotalBPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTotalBPS.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalBPS.Location = new System.Drawing.Point(184, 356);
+            this.labelTotalBPS.Location = new System.Drawing.Point(184, 353);
             this.labelTotalBPS.Name = "labelTotalBPS";
             this.labelTotalBPS.Size = new System.Drawing.Size(118, 23);
             this.labelTotalBPS.TabIndex = 113;
@@ -1413,7 +1413,7 @@
             // 
             // textBoxClicksPerSecond
             // 
-            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 310);
+            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 307);
             this.textBoxClicksPerSecond.MaxLength = 5;
             this.textBoxClicksPerSecond.Name = "textBoxClicksPerSecond";
             this.textBoxClicksPerSecond.Size = new System.Drawing.Size(118, 20);
@@ -1591,7 +1591,7 @@
             // 
             this.labelCapacityMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCapacityMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCapacityMain.Location = new System.Drawing.Point(12, 379);
+            this.labelCapacityMain.Location = new System.Drawing.Point(12, 375);
             this.labelCapacityMain.Name = "labelCapacityMain";
             this.labelCapacityMain.Size = new System.Drawing.Size(166, 23);
             this.labelCapacityMain.TabIndex = 130;
