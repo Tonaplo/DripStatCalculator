@@ -1242,7 +1242,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 98;
-            this.label2.Text = "BPS from Clicks:";
+            this.label2.Text = "Bytes from Clicks:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelUnitPriceMain

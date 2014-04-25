@@ -1009,7 +1009,7 @@ namespace DripStatCalculator
                 {
                     labelGPUUpgradeCost.Text = Function.Beautify(Function.GPUUpgrade2 / (gpuOutputPerUnit * gpuUnitCount  * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.GPUUpgrade2 / (gpuOutputPerUnit * gpuUnitCount  * 0.1m));
                     labelGPUPriceOfPowerUp.Text = Function.Beautify(Function.GPUUpgrade2) + Function.AppendCorrectAbbreviation(Function.GPUUpgrade2);
-                    if (currentLowest > Function.GPUUpgrade1 / (gpuOutputPerUnit * gpuUnitCount  * 0.1m))
+                    if (currentLowest > Function.GPUUpgrade2 / (gpuOutputPerUnit * gpuUnitCount  * 0.1m))
                     {
                         labelRecommendation.Text = "You should now buy a GPU Power Up for optimal BPS increase.";
                         priceOfNext = (long)Function.GPUUpgrade2;
@@ -1529,7 +1529,8 @@ namespace DripStatCalculator
         private void buttonFAQ_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("This program is updated for Level 4 of the DripStat Game at www.dripstat.com/game. Updates will come when new levels are available." 
-                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.1:" + Environment.NewLine + "- Fixed a bug causing upgrades for GC Failures Level 2 to be too desirable.");
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.1:" + Environment.NewLine + "- Fixed a bug causing upgrades for GC Failures Power Up Level 2 to be too desirable."
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.2:" + Environment.NewLine + "- Fixed a bug causing upgrades for CPU Power Up Level 3 to be too desirable.");
         }
 
         private void buttonResetAll_Click(object sender, EventArgs e)
