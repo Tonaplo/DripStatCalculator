@@ -213,6 +213,7 @@ namespace DripStatCalculator
             totalPower += (clusterOutputPerUnit * clusterUnitCount);
 
             labelBPSFromClicks.Text = Function.BeautifyBPS(totalPower * (0.1m * cursorPowerUpCount)+1) + Function.AppendCorrectAbbreviationBPS(totalPower * (0.1m * cursorPowerUpCount)+1);
+            labelBPSFromItems.Text = Function.BeautifyBPS(totalPower) + Function.AppendCorrectAbbreviationBPS(totalPower);
 
             totalPower += (totalPower * (0.1m * cursorPowerUpCount) + 1) * noClicksPerSecond;
 
@@ -221,8 +222,22 @@ namespace DripStatCalculator
 
         private void UpdateSpendings()
         {
+            
             labelSpendingNumber.Text = Function.Beautify((decimal)bytesSpent) + Function.AppendCorrectAbbreviation((decimal)bytesSpent);
             labelFutureSpendingNumber.Text = Function.Beautify((decimal)bytesSpent + priceOfNext) + Function.AppendCorrectAbbreviation((decimal)bytesSpent + priceOfNext);
+            if (totalPower != 0)
+            {
+                int totalSecondsToMax = (int)(priceOfNext / totalPower);
+                int secondsToMax = totalSecondsToMax % 60;
+                int minutesToMax = (totalSecondsToMax / 60) % 60;
+                int hoursToMax = (totalSecondsToMax / (60 * 60)) % 60;
+                labelSpendingTime.Text = hoursToMax + " Hours, " + minutesToMax + " Minutes and " + secondsToMax + " Seconds.";
+            }
+            else
+            {
+                labelSpendingTime.Text = "No Power!";
+            }
+
         }
 
         #region Power Up Costs Functions
@@ -1152,14 +1167,18 @@ namespace DripStatCalculator
 
             if (totalPower == 0)
                 labelTimeTakenReal.Text = "No Power!";
-            else
+            else if (capacity != 0)
             {
-                int totalSecondsToMax = (int)(capacity / totalPower);
-                int secondsToMax = totalSecondsToMax % 60;
-                int minutesToMax = (totalSecondsToMax / 60) % 60;
-                int hoursToMax = (totalSecondsToMax / (60 * 60)) % 60;
+                long totalSecondsToMax = (long)(capacity / totalPower);
+                long secondsToMax = totalSecondsToMax % 60;
+                long minutesToMax = (totalSecondsToMax / 60) % 60;
+                long hoursToMax = (totalSecondsToMax / (60 * 60)) % 60;
 
                 labelTimeTakenReal.Text = hoursToMax + " Hours, " + minutesToMax + " Minutes and " + secondsToMax + " Seconds.";
+            }
+            else 
+            {
+                labelTimeTakenReal.Text = "No capacity specified!";
             }
         }
 
@@ -1530,7 +1549,8 @@ namespace DripStatCalculator
         {
             System.Windows.Forms.MessageBox.Show("This program is updated for Level 4 of the DripStat Game at www.dripstat.com/game. Updates will come when new levels are available." 
                 + Environment.NewLine + Environment.NewLine + "Version 1.0.0.1:" + Environment.NewLine + "- Fixed a bug causing upgrades for GC Failures Power Up Level 2 to be too desirable."
-                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.2:" + Environment.NewLine + "- Fixed a bug causing upgrades for CPU Power Up Level 3 to be too desirable.");
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.2:" + Environment.NewLine + "- Fixed a bug causing upgrades for CPU Power Up Level 3 to be too desirable, also fixed a crash."
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.4:" + Environment.NewLine + "- Fixed a bug crashing the program on resets and added time till next item is purchaseable.");
         }
 
         private void buttonResetAll_Click(object sender, EventArgs e)
