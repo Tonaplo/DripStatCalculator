@@ -23,6 +23,7 @@ namespace DripStatCalculator
         public static int StartingPriceCPU = 10000000;
         public static int StartingPriceGPU = 50000000;
         public static int StartingPriceCluster = 500000000;
+        public static int StartingPriceSpringFramework = 2000000000;
 
         //Starting bytes per second
         public static decimal StartingBPSCursor = 1.0m;
@@ -34,7 +35,8 @@ namespace DripStatCalculator
         public static decimal StartingBPSCache = 200.0m;
         public static decimal StartingBPSCPU = 800.0m;
         public static decimal StartingBPSGPU = 5000.0m;
-        public static decimal StartingBPSCluster = 40000.0m;
+        public static decimal StartingBPSCluster = 55000.0m;
+        public static decimal StartingBPSSpringFramework = 250000.0m;
 
         //Number of Upgrades
         public static int NumberOfCursorUpgrades = 7;
@@ -47,6 +49,7 @@ namespace DripStatCalculator
         public static int NumberOfCPUUpgrades = 10;
         public static int NumberOfGPUUpgrades = 6;
         public static int NumberOfClusterUpgrades = 6;
+        public static int NumberOfSpringFrameworkUpgrades = 9;
 
         //Cost of Upgrades
         public static decimal CursorUpgrade1 = 30.0m;
@@ -124,6 +127,15 @@ namespace DripStatCalculator
         public static decimal ClusterUpgrade4 = 2000000000.0m;
         public static decimal ClusterUpgrade5 = 8000000000.0m;
         public static decimal ClusterUpgrade6 = 12000000000.0m;
+        public static decimal SpringFrameworkUpgrade1 = 5000000000.0m;
+        public static decimal SpringFrameworkUpgrade2 = 9000000000.0m;
+        public static decimal SpringFrameworkUpgrade3 = 12000000000.0m;
+        public static decimal SpringFrameworkUpgrade4 = 15000000000.0m;
+        public static decimal SpringFrameworkUpgrade5 = 16000000000.0m;
+        public static decimal SpringFrameworkUpgrade6 = 17500000000.0m;
+        public static decimal SpringFrameworkUpgrade7 = 18200000000.0m;
+        public static decimal SpringFrameworkUpgrade8 = 20000000000.0m;
+        public static decimal SpringFrameworkUpgrade9 = 21000000000.0m;
         #endregion
 
         public static string Beautify(decimal number)
@@ -472,6 +484,33 @@ namespace DripStatCalculator
                     return (long) ClusterUpgrade5;
                 case 6:
                     return (long) ClusterUpgrade6;
+                default:
+                    return 0;
+            }
+        }
+
+        public static long ReturnPowerUpCostSpringFramework(int PowerUpNumber)
+        {
+            switch (PowerUpNumber)
+            {
+                case 1:
+                    return (long)SpringFrameworkUpgrade1;
+                case 2:
+                    return (long)SpringFrameworkUpgrade2;
+                case 3:
+                    return (long)SpringFrameworkUpgrade3;
+                case 4:
+                    return (long)SpringFrameworkUpgrade4;
+                case 5:
+                    return (long)SpringFrameworkUpgrade5;
+                case 6:
+                    return (long)SpringFrameworkUpgrade6;
+                case 7:
+                    return (long)SpringFrameworkUpgrade7;
+                case 8:
+                    return (long)SpringFrameworkUpgrade8;
+                case 9:
+                    return (long)SpringFrameworkUpgrade9;
                 default:
                     return 0;
             }

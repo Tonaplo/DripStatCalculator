@@ -14,11 +14,11 @@ namespace DripStatCalculator
     public partial class DripStatCalculator : Form
     {
         #region All the variables
-        int cursorUnitCount, brogrammerUnitCount, gcfailureUnitCount, memoryleakUnitCount, messagequeueUnitCount, databaseUnitCount, cacheUnitCount, cpuUnitCount, gpuUnitCount, clusterUnitCount;
-        int cursorPowerUpCount, brogrammerPowerUpCount, gcfailurePowerUpCount, memoryleakPowerUpCount, messagequeuePowerUpCount, databasePowerUpCount, cachePowerUpCount, cpuPowerUpCount, gpuPowerUpCount, clusterPowerUpCount;
-        decimal cursorCurrentRealPrice, brogrammerCurrentRealPrice, gcfailureCurrentRealPrice, memoryleakCurrentRealPrice, messagequeueCurrentRealPrice, databaseCurrentRealPrice, cacheCurrentRealPrice, cpuCurrentRealPrice, gpuCurrentRealPrice, clusterCurrentRealPrice;
-        string cursorCurrentPrettyPrice, brogrammerCurrentPrettyPrice, gcfailureCurrentPrettyPrice, memoryleakCurrentPrettyPrice, messagequeueCurrentPrettyPrice, databaseCurrentPrettyPrice, cacheCurrentPrettyPrice, cpuCurrentPrettyPrice, gpuCurrentPrettyPrice, clusterCurrentPrettyPrice;
-        decimal cursorOutputPerUnit, brogrammerOutputPerUnit, gcfailureOutputPerUnit, memoryleakOutputPerUnit, messagequeueOutputPerUnit, databaseOutputPerUnit, cacheOutputPerUnit, cpuOutputPerUnit, gpuOutputPerUnit, clusterOutputPerUnit;
+        int cursorUnitCount, brogrammerUnitCount, gcfailureUnitCount, memoryleakUnitCount, messagequeueUnitCount, databaseUnitCount, cacheUnitCount, cpuUnitCount, gpuUnitCount, clusterUnitCount, springFrameworkUnitCount;
+        int cursorPowerUpCount, brogrammerPowerUpCount, gcfailurePowerUpCount, memoryleakPowerUpCount, messagequeuePowerUpCount, databasePowerUpCount, cachePowerUpCount, cpuPowerUpCount, gpuPowerUpCount, clusterPowerUpCount, springFrameworkPowerUpCount;
+        decimal cursorCurrentRealPrice, brogrammerCurrentRealPrice, gcfailureCurrentRealPrice, memoryleakCurrentRealPrice, messagequeueCurrentRealPrice, databaseCurrentRealPrice, cacheCurrentRealPrice, cpuCurrentRealPrice, gpuCurrentRealPrice, clusterCurrentRealPrice, springFrameworkCurrentRealPrice;
+        string cursorCurrentPrettyPrice, brogrammerCurrentPrettyPrice, gcfailureCurrentPrettyPrice, memoryleakCurrentPrettyPrice, messagequeueCurrentPrettyPrice, databaseCurrentPrettyPrice, cacheCurrentPrettyPrice, cpuCurrentPrettyPrice, gpuCurrentPrettyPrice, clusterCurrentPrettyPrice, springFrameworkCurrentPrettyPrice;
+        decimal cursorOutputPerUnit, brogrammerOutputPerUnit, gcfailureOutputPerUnit, memoryleakOutputPerUnit, messagequeueOutputPerUnit, databaseOutputPerUnit, cacheOutputPerUnit, cpuOutputPerUnit, gpuOutputPerUnit, clusterOutputPerUnit, springFrameworkOutputPerUnit;
         decimal currentLowest, totalPower;
         int noClicksPerSecond;
         long bytesSpent, priceOfNext, capacity;
@@ -54,6 +54,7 @@ namespace DripStatCalculator
             labelCPUCount.Text = cpuUnitCount.ToString();
             labelGPUCount.Text = gpuUnitCount.ToString();
             labelClusterCount.Text = clusterUnitCount.ToString();
+            labelSpringFrameworkCount.Text = springFrameworkUnitCount.ToString();
         }
 
         private void UpdateUnitPrice()
@@ -68,6 +69,7 @@ namespace DripStatCalculator
             labelCPUPriceOfOne.Text = cpuCurrentPrettyPrice;
             labelGPUPriceOfOne.Text = gpuCurrentPrettyPrice;
             labelClusterPriceOfOne.Text = clusterCurrentPrettyPrice;
+            labelSpringFrameworkPriceOfOne.Text = springFrameworkCurrentPrettyPrice;
         }
 
         private void UpdatePowerUpCount()
@@ -82,6 +84,7 @@ namespace DripStatCalculator
             labelCPUPowerUp.Text = cpuPowerUpCount.ToString();
             labelGPUPowerUp.Text = gpuPowerUpCount.ToString();
             labelClusterPowerUp.Text = clusterPowerUpCount.ToString();
+            labelSpringFrameworkPowerUp.Text = springFrameworkPowerUpCount.ToString();
         }
 
         private void UpdatePowerUpEffect()
@@ -103,6 +106,7 @@ namespace DripStatCalculator
             labelCPUOutputPerUnit.Text = Function.Beautify(cpuOutputPerUnit) + Function.AppendCorrectAbbreviationBPS(cpuOutputPerUnit);
             labelGPUOutputPerUnit.Text = Function.Beautify(gpuOutputPerUnit) + Function.AppendCorrectAbbreviationBPS(gpuOutputPerUnit);
             labelClusterOutputPerUnit.Text = Function.Beautify(clusterOutputPerUnit) + Function.AppendCorrectAbbreviationBPS(clusterOutputPerUnit);
+            labelSpringFrameworkOutputPerUnit.Text = Function.Beautify(springFrameworkOutputPerUnit) + Function.AppendCorrectAbbreviationBPS(springFrameworkOutputPerUnit);
         }
 
         private void UpdatePowerTotal()
@@ -117,6 +121,7 @@ namespace DripStatCalculator
             labelCPUOutputTotal.Text = Function.Beautify(cpuOutputPerUnit * cpuUnitCount) + Function.AppendCorrectAbbreviationBPS(cpuOutputPerUnit * cpuUnitCount);
             labelGPUOutputTotal.Text = Function.Beautify(gpuOutputPerUnit * gpuUnitCount) + Function.AppendCorrectAbbreviationBPS(gpuOutputPerUnit * gpuUnitCount);
             labelClusterOutputTotal.Text = Function.Beautify(clusterOutputPerUnit * clusterUnitCount) + Function.AppendCorrectAbbreviationBPS(clusterOutputPerUnit * clusterUnitCount);
+            labelSpringFrameworkOutputTotal.Text = Function.Beautify(springFrameworkOutputPerUnit * springFrameworkUnitCount) + Function.AppendCorrectAbbreviationBPS(springFrameworkOutputPerUnit * springFrameworkUnitCount);
         }
 
         #endregion
@@ -133,6 +138,7 @@ namespace DripStatCalculator
             labelCPUUnitCost.Text = Function.Beautify(cpuCurrentRealPrice / cpuOutputPerUnit) + Function.AppendCorrectAbbreviationCost(cpuCurrentRealPrice / cpuOutputPerUnit);
             labelGPUUnitCost.Text = Function.Beautify(gpuCurrentRealPrice / gpuOutputPerUnit) + Function.AppendCorrectAbbreviationCost(gpuCurrentRealPrice / gpuOutputPerUnit);
             labelClusterUnitCost.Text = Function.Beautify(clusterCurrentRealPrice / clusterOutputPerUnit) + Function.AppendCorrectAbbreviationCost(clusterCurrentRealPrice / clusterOutputPerUnit);
+            labelSpringFrameworkUnitCost.Text = Function.Beautify(springFrameworkCurrentRealPrice / springFrameworkOutputPerUnit) + Function.AppendCorrectAbbreviationCost(springFrameworkCurrentRealPrice / springFrameworkOutputPerUnit);
         }
 
         private void UpdateRecommendation()
@@ -196,6 +202,12 @@ namespace DripStatCalculator
                 labelRecommendation.Text = "You should now buy a Cluster for optimal BPS increase.";
                 priceOfNext = (long)clusterCurrentRealPrice;
             }
+            if (currentLowest > springFrameworkCurrentRealPrice / springFrameworkOutputPerUnit)
+            {
+                currentLowest = springFrameworkCurrentRealPrice / springFrameworkOutputPerUnit;
+                labelRecommendation.Text = "You should now buy a Spring Framework for optimal BPS increase.";
+                priceOfNext = (long)springFrameworkCurrentRealPrice;
+            }
         }
 
         private void UpdateTotalBPS()
@@ -211,6 +223,7 @@ namespace DripStatCalculator
             totalPower += (cpuOutputPerUnit * cpuUnitCount);
             totalPower += (gpuOutputPerUnit * gpuUnitCount);
             totalPower += (clusterOutputPerUnit * clusterUnitCount);
+            totalPower += (springFrameworkOutputPerUnit * springFrameworkUnitCount);
 
             labelBPSFromClicks.Text = Function.BeautifyBPS(totalPower * (0.1m * cursorPowerUpCount)+1) + Function.AppendCorrectAbbreviationBPS(totalPower * (0.1m * cursorPowerUpCount)+1);
             labelBPSFromItems.Text = Function.BeautifyBPS(totalPower) + Function.AppendCorrectAbbreviationBPS(totalPower);
@@ -254,6 +267,7 @@ namespace DripStatCalculator
             UpdateCPUPowerUpCosts();
             UpdateGPUPowerUpCosts();
             UpdateClusterPowerUpCosts();
+            UpdateSpringFrameworkPowerUpCosts();
         }
 
         private void UpdateCursorPowerUpCosts()
@@ -1151,6 +1165,118 @@ namespace DripStatCalculator
             }
         }
 
+        private void UpdateSpringFrameworkPowerUpCosts()
+        {
+            if (springFrameworkUnitCount != 0)
+            {
+                if (springFrameworkPowerUpCount == 0)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade1 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade1 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade1) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade1);
+                    if (currentLowest > Function.SpringFrameworkUpgrade1 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade1;
+                        currentLowest = Function.SpringFrameworkUpgrade1 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 1)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade2 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade2 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade2) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade2);
+                    if (currentLowest > Function.SpringFrameworkUpgrade2 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade2;
+                        currentLowest = Function.SpringFrameworkUpgrade2 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 2)
+                {   
+
+
+
+
+
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade3 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade3 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade3) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade3);
+                    if (currentLowest > Function.SpringFrameworkUpgrade3 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade3;
+                        currentLowest = Function.SpringFrameworkUpgrade3 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 3)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade4 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade4 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade4) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade4);
+                    if (currentLowest > Function.SpringFrameworkUpgrade4 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade4;
+                        currentLowest = Function.SpringFrameworkUpgrade4 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 4)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade5 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade5 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade5) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade5);
+                    if (currentLowest > Function.SpringFrameworkUpgrade5 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade5;
+                        currentLowest = Function.SpringFrameworkUpgrade5 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 5)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade6 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade6 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade6) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade6);
+                    if (currentLowest > Function.SpringFrameworkUpgrade6 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade6;
+                        currentLowest = Function.SpringFrameworkUpgrade6 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 6)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade7 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade7 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade7) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade7);
+                    if (currentLowest > Function.SpringFrameworkUpgrade7 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade7;
+                        currentLowest = Function.SpringFrameworkUpgrade7 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 7)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade8 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade8 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade8) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade8);
+                    if (currentLowest > Function.SpringFrameworkUpgrade8 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade8;
+                        currentLowest = Function.SpringFrameworkUpgrade8 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+                else if (springFrameworkPowerUpCount == 8)
+                {
+                    labelSpringFrameworkUpgradeCost.Text = Function.Beautify(Function.SpringFrameworkUpgrade9 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m)) + Function.AppendCorrectAbbreviationCost(Function.SpringFrameworkUpgrade9 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m));
+                    labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.SpringFrameworkUpgrade9) + Function.AppendCorrectAbbreviation(Function.SpringFrameworkUpgrade9);
+                    if (currentLowest > Function.SpringFrameworkUpgrade9 / (springFrameworkOutputPerUnit * springFrameworkUnitCount * 0.1m))
+                    {
+                        labelRecommendation.Text = "You should now buy a Spring Framework Power Up for optimal BPS increase.";
+                        priceOfNext = (long)Function.SpringFrameworkUpgrade9;
+                        currentLowest = Function.SpringFrameworkUpgrade9 / (springFrameworkOutputPerUnit * springFrameworkUnitCount);
+                    }
+                }
+            }
+        }
+
+
         #endregion
 
         private void UpdateTime()
@@ -1196,6 +1322,7 @@ namespace DripStatCalculator
             cpuUnitCount = 0;
             gpuUnitCount = 0;
             clusterUnitCount = 0;
+            springFrameworkUnitCount = 0;
             cursorPowerUpCount = 0;
             brogrammerPowerUpCount = 0;
             gcfailurePowerUpCount = 0;
@@ -1206,6 +1333,7 @@ namespace DripStatCalculator
             cpuPowerUpCount = 0;
             gpuPowerUpCount = 0;
             clusterPowerUpCount = 0;
+            springFrameworkPowerUpCount = 0;
 
             cursorCurrentRealPrice = Function.StartingPriceCursor;
             brogrammerCurrentRealPrice = Function.StartingPriceBrogrammer;
@@ -1217,6 +1345,7 @@ namespace DripStatCalculator
             cpuCurrentRealPrice = Function.StartingPriceCPU;
             gpuCurrentRealPrice = Function.StartingPriceGPU;
             clusterCurrentRealPrice = Function.StartingPriceCluster;
+            springFrameworkCurrentRealPrice = Function.StartingPriceSpringFramework;
 
             cursorOutputPerUnit = (decimal)Function.StartingBPSCursor;
             brogrammerOutputPerUnit = (decimal)Function.StartingBPSBrogrammer;
@@ -1228,6 +1357,7 @@ namespace DripStatCalculator
             cpuOutputPerUnit = (decimal)Function.StartingBPSCPU;
             gpuOutputPerUnit = (decimal)Function.StartingBPSGPU;
             clusterOutputPerUnit = (decimal)Function.StartingBPSCluster;
+            springFrameworkOutputPerUnit = (decimal)Function.StartingBPSSpringFramework;
 
             cursorCurrentPrettyPrice = Function.Beautify(cursorCurrentRealPrice) + Function.AppendCorrectAbbreviation(cursorCurrentRealPrice);
             brogrammerCurrentPrettyPrice = Function.Beautify(brogrammerCurrentRealPrice) + Function.AppendCorrectAbbreviation(brogrammerCurrentRealPrice);
@@ -1239,6 +1369,7 @@ namespace DripStatCalculator
             cpuCurrentPrettyPrice = Function.Beautify(cpuCurrentRealPrice) + Function.AppendCorrectAbbreviation(cpuCurrentRealPrice);
             gpuCurrentPrettyPrice = Function.Beautify(gpuCurrentRealPrice) + Function.AppendCorrectAbbreviation(gpuCurrentRealPrice);
             clusterCurrentPrettyPrice = Function.Beautify(clusterCurrentRealPrice) + Function.AppendCorrectAbbreviation(clusterCurrentRealPrice);
+            springFrameworkCurrentPrettyPrice = Function.Beautify(springFrameworkCurrentRealPrice) + Function.AppendCorrectAbbreviation(springFrameworkCurrentRealPrice);
 
             buttonCursorBuyPowerUp.Enabled = true;
             buttonBrogrammerBuyPowerUp.Enabled = true;
@@ -1250,17 +1381,19 @@ namespace DripStatCalculator
             buttonCPUBuyPowerUp.Enabled = true;
             buttonGPUBuyPowerUp.Enabled = true;
             buttonClusterBuyPowerUp.Enabled = true;
+            buttonSpringFrameworkBuyPowerUp.Enabled = true;
 
-            labelCursorPriceOfPowerUp.Text = "0";
-            labelBrogrammerPriceOfPowerUp.Text = "0";
-            labelGCFailurePriceOfPowerUp.Text = "0";
-            labelMemoryLeakPriceOfPowerUp.Text = "0";
-            labelMessageQueuePriceOfPowerUp.Text = "0";
-            labelDatabasePriceOfPowerUp.Text = "0";
-            labelCachePriceOfPowerUp.Text = "0";
-            labelCPUPriceOfPowerUp.Text = "0";
-            labelGPUPriceOfPowerUp.Text = "0";
-            labelClusterPriceOfPowerUp.Text = "0";
+            labelCursorPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostCursor(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostCursor(1));
+            labelBrogrammerPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostBrogrammer(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostBrogrammer(1));
+            labelGCFailurePriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostGCFailure(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostGCFailure(1));
+            labelMemoryLeakPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostMemoryLeak(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostMemoryLeak(1));
+            labelMessageQueuePriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostMessageQueue(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostMessageQueue(1));
+            labelDatabasePriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostDatabase(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostDatabase(1));
+            labelCachePriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostCache(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostCache(1));
+            labelCPUPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostCPU(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostCPU(1));
+            labelGPUPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostGPU(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostGPU(1));
+            labelClusterPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostCluster(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostCluster(1));
+            labelSpringFrameworkPriceOfPowerUp.Text = Function.Beautify(Function.ReturnPowerUpCostSpringFramework(1)) + Function.AppendCorrectAbbreviation(Function.ReturnPowerUpCostSpringFramework(1));
 
             labelCursorUpgradeCost.Text = "0";
             labelBrogrammerUpgradeCost.Text = "0";
@@ -1272,6 +1405,7 @@ namespace DripStatCalculator
             labelCPUUpgradeCost.Text = "0";
             labelGPUUpgradeCost.Text = "0";
             labelClusterUpgradeCost.Text = "0";
+            labelSpringFrameworkUpgradeCost.Text = "0";
 
             bytesSpent = 0;
             priceOfNext = 0;
@@ -1381,6 +1515,14 @@ namespace DripStatCalculator
                 clusterCurrentRealPrice *= Function.Multiplier;
                 clusterCurrentRealPrice = Function.BeautifyButKeepLength(clusterCurrentRealPrice);
                 clusterCurrentPrettyPrice = Function.Beautify(clusterCurrentRealPrice) + Function.AppendCorrectAbbreviation(clusterCurrentRealPrice);
+            }
+            else if (sender.Equals(buttonSpringFrameworkBuyUnit))
+            {
+                springFrameworkUnitCount++;
+                bytesSpent += (long)springFrameworkCurrentRealPrice;
+                springFrameworkCurrentRealPrice *= Function.Multiplier;
+                springFrameworkCurrentRealPrice = Function.BeautifyButKeepLength(springFrameworkCurrentRealPrice);
+                springFrameworkCurrentPrettyPrice = Function.Beautify(springFrameworkCurrentRealPrice) + Function.AppendCorrectAbbreviation(springFrameworkCurrentRealPrice);
             }
             UpdateAll();
         }
@@ -1507,6 +1649,18 @@ namespace DripStatCalculator
                     labelClusterPriceOfPowerUp.Text = "All Bought!";
                 }
             }
+            else if (sender.Equals(buttonSpringFrameworkBuyPowerUp))
+            {
+                springFrameworkPowerUpCount++;
+                bytesSpent += Function.ReturnPowerUpCostSpringFramework(springFrameworkPowerUpCount);
+                springFrameworkOutputPerUnit *= Function.Multiplier;
+                if (springFrameworkPowerUpCount == Function.NumberOfSpringFrameworkUpgrades)
+                {
+                    buttonSpringFrameworkBuyPowerUp.Enabled = false;
+                    labelSpringFrameworkUpgradeCost.Text = "All Bought!";
+                    labelSpringFrameworkPriceOfPowerUp.Text = "All Bought!";
+                }
+            }
             UpdateAll();
         }
 
@@ -1550,7 +1704,8 @@ namespace DripStatCalculator
             System.Windows.Forms.MessageBox.Show("This program is updated for Level 4 of the DripStat Game at www.dripstat.com/game. Updates will come when new levels are available." 
                 + Environment.NewLine + Environment.NewLine + "Version 1.0.0.1:" + Environment.NewLine + "- Fixed a bug causing upgrades for GC Failures Power Up Level 2 to be too desirable."
                 + Environment.NewLine + Environment.NewLine + "Version 1.0.0.2:" + Environment.NewLine + "- Fixed a bug causing upgrades for CPU Power Up Level 3 to be too desirable, also fixed a crash."
-                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.4:" + Environment.NewLine + "- Fixed a bug crashing the program on resets and added time till next item is purchaseable.");
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.4:" + Environment.NewLine + "- Fixed a bug crashing the program on resets and added time till next item is purchaseable."
+                + Environment.NewLine + Environment.NewLine + "Version 1.0.0.5:" + Environment.NewLine + "- Added Spring Framework to the program.");
         }
 
         private void buttonResetAll_Click(object sender, EventArgs e)

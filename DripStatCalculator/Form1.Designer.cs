@@ -171,6 +171,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelSpendingTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkPriceOfPowerUp = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkPriceOfOne = new System.Windows.Forms.Label();
+            this.buttonSpringFrameworkBuyUnit = new System.Windows.Forms.Button();
+            this.buttonSpringFrameworkBuyPowerUp = new System.Windows.Forms.Button();
+            this.labelSpringFrameworkUpgradeCost = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkUnitCost = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkOutputTotal = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkOutputPerUnit = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkPowerUp = new System.Windows.Forms.Label();
+            this.labelSpringFrameworkCount = new System.Windows.Forms.Label();
+            this.labelSpringFramework = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelCursor
@@ -1231,7 +1242,7 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 307);
+            this.label1.Location = new System.Drawing.Point(12, 342);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 23);
             this.label1.TabIndex = 97;
@@ -1242,7 +1253,7 @@
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 330);
+            this.label2.Location = new System.Drawing.Point(12, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 98;
@@ -1375,7 +1386,7 @@
             // 
             this.labelBPSFromClicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBPSFromClicks.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 330);
+            this.labelBPSFromClicks.Location = new System.Drawing.Point(184, 365);
             this.labelBPSFromClicks.Name = "labelBPSFromClicks";
             this.labelBPSFromClicks.Size = new System.Drawing.Size(118, 23);
             this.labelBPSFromClicks.TabIndex = 111;
@@ -1386,7 +1397,7 @@
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 375);
+            this.label3.Location = new System.Drawing.Point(12, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 23);
             this.label3.TabIndex = 112;
@@ -1397,7 +1408,7 @@
             // 
             this.labelTotalBPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTotalBPS.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalBPS.Location = new System.Drawing.Point(184, 375);
+            this.labelTotalBPS.Location = new System.Drawing.Point(184, 410);
             this.labelTotalBPS.Name = "labelTotalBPS";
             this.labelTotalBPS.Size = new System.Drawing.Size(118, 23);
             this.labelTotalBPS.TabIndex = 113;
@@ -1408,7 +1419,7 @@
             // 
             this.labelRecommendation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelRecommendation.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecommendation.Location = new System.Drawing.Point(433, 307);
+            this.labelRecommendation.Location = new System.Drawing.Point(433, 342);
             this.labelRecommendation.Name = "labelRecommendation";
             this.labelRecommendation.Size = new System.Drawing.Size(745, 46);
             this.labelRecommendation.TabIndex = 114;
@@ -1417,7 +1428,7 @@
             // 
             // textBoxClicksPerSecond
             // 
-            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 307);
+            this.textBoxClicksPerSecond.Location = new System.Drawing.Point(184, 342);
             this.textBoxClicksPerSecond.MaxLength = 5;
             this.textBoxClicksPerSecond.Name = "textBoxClicksPerSecond";
             this.textBoxClicksPerSecond.Size = new System.Drawing.Size(118, 20);
@@ -1430,7 +1441,7 @@
             // 
             this.labelSpendingMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelSpendingMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpendingMain.Location = new System.Drawing.Point(433, 353);
+            this.labelSpendingMain.Location = new System.Drawing.Point(433, 388);
             this.labelSpendingMain.Name = "labelSpendingMain";
             this.labelSpendingMain.Size = new System.Drawing.Size(428, 23);
             this.labelSpendingMain.TabIndex = 116;
@@ -1441,7 +1452,7 @@
             // 
             this.labelSpendingNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelSpendingNumber.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpendingNumber.Location = new System.Drawing.Point(867, 353);
+            this.labelSpendingNumber.Location = new System.Drawing.Point(867, 388);
             this.labelSpendingNumber.Name = "labelSpendingNumber";
             this.labelSpendingNumber.Size = new System.Drawing.Size(169, 23);
             this.labelSpendingNumber.TabIndex = 117;
@@ -1450,7 +1461,7 @@
             // 
             // buttonResetSpendings
             // 
-            this.buttonResetSpendings.Location = new System.Drawing.Point(1042, 353);
+            this.buttonResetSpendings.Location = new System.Drawing.Point(1042, 388);
             this.buttonResetSpendings.Name = "buttonResetSpendings";
             this.buttonResetSpendings.Size = new System.Drawing.Size(108, 20);
             this.buttonResetSpendings.TabIndex = 118;
@@ -1582,7 +1593,7 @@
             // 
             // textBoxCapacity
             // 
-            this.textBoxCapacity.Location = new System.Drawing.Point(184, 401);
+            this.textBoxCapacity.Location = new System.Drawing.Point(184, 436);
             this.textBoxCapacity.MaxLength = 300;
             this.textBoxCapacity.Name = "textBoxCapacity";
             this.textBoxCapacity.Size = new System.Drawing.Size(118, 20);
@@ -1595,7 +1606,7 @@
             // 
             this.labelCapacityMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCapacityMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCapacityMain.Location = new System.Drawing.Point(12, 397);
+            this.labelCapacityMain.Location = new System.Drawing.Point(12, 432);
             this.labelCapacityMain.Name = "labelCapacityMain";
             this.labelCapacityMain.Size = new System.Drawing.Size(166, 23);
             this.labelCapacityMain.TabIndex = 130;
@@ -1606,7 +1617,7 @@
             // 
             this.labelTimeTakeMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTimeTakeMain.Font = new System.Drawing.Font("Arial Black", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimeTakeMain.Location = new System.Drawing.Point(308, 307);
+            this.labelTimeTakeMain.Location = new System.Drawing.Point(308, 342);
             this.labelTimeTakeMain.Name = "labelTimeTakeMain";
             this.labelTimeTakeMain.Size = new System.Drawing.Size(114, 34);
             this.labelTimeTakeMain.TabIndex = 132;
@@ -1617,7 +1628,7 @@
             // 
             this.labelTimeTakenReal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTimeTakenReal.Font = new System.Drawing.Font("Arial Black", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimeTakenReal.Location = new System.Drawing.Point(308, 341);
+            this.labelTimeTakenReal.Location = new System.Drawing.Point(308, 376);
             this.labelTimeTakenReal.Name = "labelTimeTakenReal";
             this.labelTimeTakenReal.Size = new System.Drawing.Size(114, 79);
             this.labelTimeTakenReal.TabIndex = 133;
@@ -1626,7 +1637,7 @@
             // 
             // buttonFAQ
             // 
-            this.buttonFAQ.Location = new System.Drawing.Point(1156, 353);
+            this.buttonFAQ.Location = new System.Drawing.Point(1156, 388);
             this.buttonFAQ.Name = "buttonFAQ";
             this.buttonFAQ.Size = new System.Drawing.Size(20, 20);
             this.buttonFAQ.TabIndex = 134;
@@ -1638,7 +1649,7 @@
             // 
             this.labelFutureSpendingNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelFutureSpendingNumber.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFutureSpendingNumber.Location = new System.Drawing.Point(867, 375);
+            this.labelFutureSpendingNumber.Location = new System.Drawing.Point(867, 410);
             this.labelFutureSpendingNumber.Name = "labelFutureSpendingNumber";
             this.labelFutureSpendingNumber.Size = new System.Drawing.Size(169, 23);
             this.labelFutureSpendingNumber.TabIndex = 136;
@@ -1649,7 +1660,7 @@
             // 
             this.labelFutureSpendingMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelFutureSpendingMain.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFutureSpendingMain.Location = new System.Drawing.Point(433, 375);
+            this.labelFutureSpendingMain.Location = new System.Drawing.Point(433, 410);
             this.labelFutureSpendingMain.Name = "labelFutureSpendingMain";
             this.labelFutureSpendingMain.Size = new System.Drawing.Size(428, 23);
             this.labelFutureSpendingMain.TabIndex = 135;
@@ -1658,7 +1669,7 @@
             // 
             // buttonResetAll
             // 
-            this.buttonResetAll.Location = new System.Drawing.Point(1042, 376);
+            this.buttonResetAll.Location = new System.Drawing.Point(1042, 411);
             this.buttonResetAll.Name = "buttonResetAll";
             this.buttonResetAll.Size = new System.Drawing.Size(108, 20);
             this.buttonResetAll.TabIndex = 137;
@@ -1668,7 +1679,7 @@
             // 
             // buttonBugReport
             // 
-            this.buttonBugReport.Location = new System.Drawing.Point(1156, 376);
+            this.buttonBugReport.Location = new System.Drawing.Point(1156, 411);
             this.buttonBugReport.Name = "buttonBugReport";
             this.buttonBugReport.Size = new System.Drawing.Size(20, 20);
             this.buttonBugReport.TabIndex = 138;
@@ -1680,7 +1691,7 @@
             // 
             this.labelBPSFromItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelBPSFromItems.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBPSFromItems.Location = new System.Drawing.Point(184, 352);
+            this.labelBPSFromItems.Location = new System.Drawing.Point(184, 387);
             this.labelBPSFromItems.Name = "labelBPSFromItems";
             this.labelBPSFromItems.Size = new System.Drawing.Size(118, 23);
             this.labelBPSFromItems.TabIndex = 140;
@@ -1691,7 +1702,7 @@
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 352);
+            this.label5.Location = new System.Drawing.Point(12, 387);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 23);
             this.label5.TabIndex = 139;
@@ -1702,7 +1713,7 @@
             // 
             this.labelSpendingTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelSpendingTime.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpendingTime.Location = new System.Drawing.Point(867, 397);
+            this.labelSpendingTime.Location = new System.Drawing.Point(867, 432);
             this.labelSpendingTime.Name = "labelSpendingTime";
             this.labelSpendingTime.Size = new System.Drawing.Size(309, 23);
             this.labelSpendingTime.TabIndex = 142;
@@ -1713,18 +1724,148 @@
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(433, 397);
+            this.label6.Location = new System.Drawing.Point(433, 432);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(428, 23);
             this.label6.TabIndex = 141;
             this.label6.Text = "From empty, you can buy your next item in:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelSpringFrameworkPriceOfPowerUp
+            // 
+            this.labelSpringFrameworkPriceOfPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkPriceOfPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkPriceOfPowerUp.Location = new System.Drawing.Point(742, 289);
+            this.labelSpringFrameworkPriceOfPowerUp.Name = "labelSpringFrameworkPriceOfPowerUp";
+            this.labelSpringFrameworkPriceOfPowerUp.Size = new System.Drawing.Size(119, 23);
+            this.labelSpringFrameworkPriceOfPowerUp.TabIndex = 153;
+            this.labelSpringFrameworkPriceOfPowerUp.Text = "0";
+            this.labelSpringFrameworkPriceOfPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkPriceOfOne
+            // 
+            this.labelSpringFrameworkPriceOfOne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkPriceOfOne.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkPriceOfOne.Location = new System.Drawing.Point(640, 289);
+            this.labelSpringFrameworkPriceOfOne.Name = "labelSpringFrameworkPriceOfOne";
+            this.labelSpringFrameworkPriceOfOne.Size = new System.Drawing.Size(96, 23);
+            this.labelSpringFrameworkPriceOfOne.TabIndex = 152;
+            this.labelSpringFrameworkPriceOfOne.Text = "0";
+            this.labelSpringFrameworkPriceOfOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonSpringFrameworkBuyUnit
+            // 
+            this.buttonSpringFrameworkBuyUnit.Location = new System.Drawing.Point(283, 289);
+            this.buttonSpringFrameworkBuyUnit.Name = "buttonSpringFrameworkBuyUnit";
+            this.buttonSpringFrameworkBuyUnit.Size = new System.Drawing.Size(19, 23);
+            this.buttonSpringFrameworkBuyUnit.TabIndex = 151;
+            this.buttonSpringFrameworkBuyUnit.Text = "+";
+            this.buttonSpringFrameworkBuyUnit.UseVisualStyleBackColor = true;
+            this.buttonSpringFrameworkBuyUnit.Click += new System.EventHandler(this.buttonBuyUnit_Click);
+            // 
+            // buttonSpringFrameworkBuyPowerUp
+            // 
+            this.buttonSpringFrameworkBuyPowerUp.Location = new System.Drawing.Point(403, 289);
+            this.buttonSpringFrameworkBuyPowerUp.Name = "buttonSpringFrameworkBuyPowerUp";
+            this.buttonSpringFrameworkBuyPowerUp.Size = new System.Drawing.Size(19, 23);
+            this.buttonSpringFrameworkBuyPowerUp.TabIndex = 150;
+            this.buttonSpringFrameworkBuyPowerUp.Text = "+";
+            this.buttonSpringFrameworkBuyPowerUp.UseVisualStyleBackColor = true;
+            this.buttonSpringFrameworkBuyPowerUp.Click += new System.EventHandler(this.buttonBuyPowerUp_Click);
+            // 
+            // labelSpringFrameworkUpgradeCost
+            // 
+            this.labelSpringFrameworkUpgradeCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkUpgradeCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkUpgradeCost.Location = new System.Drawing.Point(1042, 289);
+            this.labelSpringFrameworkUpgradeCost.Name = "labelSpringFrameworkUpgradeCost";
+            this.labelSpringFrameworkUpgradeCost.Size = new System.Drawing.Size(136, 23);
+            this.labelSpringFrameworkUpgradeCost.TabIndex = 149;
+            this.labelSpringFrameworkUpgradeCost.Text = "0";
+            this.labelSpringFrameworkUpgradeCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkUnitCost
+            // 
+            this.labelSpringFrameworkUnitCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkUnitCost.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkUnitCost.Location = new System.Drawing.Point(867, 289);
+            this.labelSpringFrameworkUnitCost.Name = "labelSpringFrameworkUnitCost";
+            this.labelSpringFrameworkUnitCost.Size = new System.Drawing.Size(169, 23);
+            this.labelSpringFrameworkUnitCost.TabIndex = 148;
+            this.labelSpringFrameworkUnitCost.Text = "0";
+            this.labelSpringFrameworkUnitCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkOutputTotal
+            // 
+            this.labelSpringFrameworkOutputTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkOutputTotal.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkOutputTotal.Location = new System.Drawing.Point(534, 289);
+            this.labelSpringFrameworkOutputTotal.Name = "labelSpringFrameworkOutputTotal";
+            this.labelSpringFrameworkOutputTotal.Size = new System.Drawing.Size(100, 23);
+            this.labelSpringFrameworkOutputTotal.TabIndex = 147;
+            this.labelSpringFrameworkOutputTotal.Text = "0";
+            this.labelSpringFrameworkOutputTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkOutputPerUnit
+            // 
+            this.labelSpringFrameworkOutputPerUnit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkOutputPerUnit.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkOutputPerUnit.Location = new System.Drawing.Point(428, 289);
+            this.labelSpringFrameworkOutputPerUnit.Name = "labelSpringFrameworkOutputPerUnit";
+            this.labelSpringFrameworkOutputPerUnit.Size = new System.Drawing.Size(100, 23);
+            this.labelSpringFrameworkOutputPerUnit.TabIndex = 146;
+            this.labelSpringFrameworkOutputPerUnit.Text = "0";
+            this.labelSpringFrameworkOutputPerUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkPowerUp
+            // 
+            this.labelSpringFrameworkPowerUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkPowerUp.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkPowerUp.Location = new System.Drawing.Point(308, 289);
+            this.labelSpringFrameworkPowerUp.Name = "labelSpringFrameworkPowerUp";
+            this.labelSpringFrameworkPowerUp.Size = new System.Drawing.Size(89, 23);
+            this.labelSpringFrameworkPowerUp.TabIndex = 145;
+            this.labelSpringFrameworkPowerUp.Text = "0";
+            this.labelSpringFrameworkPowerUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFrameworkCount
+            // 
+            this.labelSpringFrameworkCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFrameworkCount.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFrameworkCount.Location = new System.Drawing.Point(184, 289);
+            this.labelSpringFrameworkCount.Name = "labelSpringFrameworkCount";
+            this.labelSpringFrameworkCount.Size = new System.Drawing.Size(93, 23);
+            this.labelSpringFrameworkCount.TabIndex = 144;
+            this.labelSpringFrameworkCount.Text = "0";
+            this.labelSpringFrameworkCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSpringFramework
+            // 
+            this.labelSpringFramework.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSpringFramework.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpringFramework.Location = new System.Drawing.Point(12, 289);
+            this.labelSpringFramework.Name = "labelSpringFramework";
+            this.labelSpringFramework.Size = new System.Drawing.Size(166, 23);
+            this.labelSpringFramework.TabIndex = 143;
+            this.labelSpringFramework.Text = "Spring Framework:";
+            this.labelSpringFramework.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DripStatCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 430);
+            this.ClientSize = new System.Drawing.Size(1188, 469);
+            this.Controls.Add(this.labelSpringFrameworkPriceOfPowerUp);
+            this.Controls.Add(this.labelSpringFrameworkPriceOfOne);
+            this.Controls.Add(this.buttonSpringFrameworkBuyUnit);
+            this.Controls.Add(this.buttonSpringFrameworkBuyPowerUp);
+            this.Controls.Add(this.labelSpringFrameworkUpgradeCost);
+            this.Controls.Add(this.labelSpringFrameworkUnitCost);
+            this.Controls.Add(this.labelSpringFrameworkOutputTotal);
+            this.Controls.Add(this.labelSpringFrameworkOutputPerUnit);
+            this.Controls.Add(this.labelSpringFrameworkPowerUp);
+            this.Controls.Add(this.labelSpringFrameworkCount);
+            this.Controls.Add(this.labelSpringFramework);
             this.Controls.Add(this.labelSpendingTime);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelBPSFromItems);
@@ -2022,6 +2163,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelSpendingTime;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelSpringFrameworkPriceOfPowerUp;
+        private System.Windows.Forms.Label labelSpringFrameworkPriceOfOne;
+        private System.Windows.Forms.Button buttonSpringFrameworkBuyUnit;
+        private System.Windows.Forms.Button buttonSpringFrameworkBuyPowerUp;
+        private System.Windows.Forms.Label labelSpringFrameworkUpgradeCost;
+        private System.Windows.Forms.Label labelSpringFrameworkUnitCost;
+        private System.Windows.Forms.Label labelSpringFrameworkOutputTotal;
+        private System.Windows.Forms.Label labelSpringFrameworkOutputPerUnit;
+        private System.Windows.Forms.Label labelSpringFrameworkPowerUp;
+        private System.Windows.Forms.Label labelSpringFrameworkCount;
+        private System.Windows.Forms.Label labelSpringFramework;
     }
 }
 
